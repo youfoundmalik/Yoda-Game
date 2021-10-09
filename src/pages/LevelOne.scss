@@ -1,0 +1,62 @@
+.level-one__container{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    background-image: url('../images/Lvl1/Yoda_Background.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .level-one__stall{
+        position: absolute;
+        width: 35%;
+        top: 50px;
+        left: -50px;
+    }
+
+    .level-one__basket{
+        position: absolute;
+        width: 16%;
+        top: 37%;
+        left: 49%;
+    }
+
+    .Blueberry{
+        left: 87%;
+        top: 25%;
+        width: 8%;
+    }
+    .Banana{
+        left: 81%;
+        top: 50%;
+        width: 13%;
+    }
+    .Coconut{
+        left: 70%;
+        top: 71%;
+        width: 15%;
+    }
+    .Watermelon{
+        left: 54%;
+        top: 76.5%;
+        width: 12%;
+    }
+    .Cherry{
+        left: 40%;
+        top: 73%;
+        width: 8%;
+    }
+    .Pineapple{
+        left: 25%;
+        top: 60%;
+        width: 14%;
+        justify-content: start !important;
+
+        .fruit__calories{
+            margin-right: 40%;
+        }
+        .fruit__price{
+            margin-right: 40%;
+        }
+    }
+}

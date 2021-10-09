@@ -1,6 +1,6 @@
 import './App.css';
 import { Helmet } from 'react-helmet';
-import LevelOne from './components/LevelOne';
+import LevelOne from './pages/LevelOne';
 
 function App() {
   return (
