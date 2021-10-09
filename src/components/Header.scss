@@ -1,8 +1,10 @@
 .header-area{
+    align-self: start;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     align-items: center;
     padding-top: 15px;
+    z-index: 99;
 
     .header__empty{}
 

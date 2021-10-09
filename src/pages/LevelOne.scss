@@ -1,4 +1,5 @@
 .level-one__container{
+    display: grid;
     width: 100vw;
     height: 100vh;
     background-color: aliceblue;
@@ -12,6 +13,7 @@
         width: 35%;
         top: 50px;
         left: -50px;
+        z-index: 1;
     }
 
     .level-one__basket{

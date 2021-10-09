@@ -1,0 +1,42 @@
+.footer-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    align-self: flex-end;
+    padding-bottom: 15px;
+
+    .footer__retry-area{
+        justify-content: left;
+        .footer__retry{
+            display: grid;
+            width: 20%;
+            cursor: pointer;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            z-index: 99;
+            position: relative;
+
+            .retry__image{
+                width: 70px;
+            }
+            p{
+                font-size: 24px;
+            }
+        }
+    }
+
+    .footer__others{
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        margin-right: 20px;
+        .footer__sound{
+            width: 25px;
+            cursor: pointer;
+        }
+        .footer__fullscreen{
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+}

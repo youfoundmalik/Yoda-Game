@@ -13,6 +13,7 @@ import Cherry from '../images/Lvl1/Yoda_Fruit-Cherry.png'
 import Coconut from '../images/Lvl1/Yoda_Fruit-Coconut.png'
 import Pineapple from '../images/Lvl1/Yoda_Fruit-Pineapple.png'
 import Watermelon from '../images/Lvl1/Yoda_Fruit-Watermelon.png'
+import Footer from '../components/Footer'
 
 
 const LevelOne = () => {
@@ -55,6 +56,7 @@ const LevelOne = () => {
                         )
                     })
                 }
+                <Footer/>
             </div>
             
         </>
