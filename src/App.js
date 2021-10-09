@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { Helmet } from 'react-helmet';
+import LevelOne from './components/LevelOne';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Helmet>
         <title>Yoda</title>
       </Helmet>
-      
+      <LevelOne/>
     </div>
   );
 }

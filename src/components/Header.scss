@@ -1,0 +1,48 @@
+.header-area{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    align-items: center;
+    padding-top: 15px;
+
+    .header__empty{}
+
+    .header__tagline{
+        width: 95%;
+    }
+
+    .header__dynamic-area{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .dynamic-area__money{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .money__image{
+                width: 40%;
+                padding-top: 10px;
+            }
+
+            .money__amount{
+                font-size: 32px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+
+                .amount__figure{}
+            }
+        }
+
+        .dynamic-area__bar{
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            
+            .bar__guage{
+                width: 30%;
+            }
+        }
+    }
+}
