@@ -35,6 +35,8 @@ const fruits = [
 
 const LevelOne = () => {
 
+    const [fruitList, setFruitsList] = useState(fruits)
+
     const [inBasket, setInBasket] = useState([]);
     const [counter, setCounter] = useState(0);
     const [cash, setCash] = useState(25);
@@ -49,23 +51,29 @@ const LevelOne = () => {
     }))
 
     const addFruitToBasket = (id) => {
-        const draggedFruit = fruits.filter((fruit) => id === fruit.id)
+
+        const draggedFruit = fruitList.filter((fruit) => id === fruit.id)
 
         setInBasket((inBasket)=>{
             return [...inBasket, {...draggedFruit[0]}]
         })
+
+        setFruitsList((fruitList)=>{
+            return fruitList.filter((fruit) => id !== fruit.id)
+        })
+
         setCash((cash)=>{
             return parseInt(cash) - parseInt(draggedFruit[0].price)
         })
+
         setCounter((counter)=>{
             return parseInt(counter) + 1
         })
+        
         setCalories((calories)=>{
             return parseInt(calories) + parseInt(draggedFruit[0].cal)
         })
 
-        // console.log(counter)
-        // console.log(cash)
     }
 
     const resetGame = () => {
@@ -77,6 +85,8 @@ const LevelOne = () => {
         setCounter(0)
 
         setCalories(0)
+
+        setFruitsList(fruits)
     }
 
     return (
@@ -111,7 +121,7 @@ const LevelOne = () => {
                     }
                 </div>
                 {
-                    fruits.map(({fruit,image,cal,price,id})=>{
+                    fruitList?.map(({fruit,image,cal,price,id})=>{
                         return(
                             <Fruit
                                 id={id}
