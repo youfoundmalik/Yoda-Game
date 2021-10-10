@@ -7,6 +7,7 @@
 
     .footer__retry-area{
         justify-content: left;
+        margin-left: 10px;
         .footer__retry{
             display: grid;
             width: 20%;
@@ -17,10 +18,10 @@
             position: relative;
 
             .retry__image{
-                width: 70px;
+                width: 80px;
             }
             p{
-                font-size: 24px;
+                font-size: 28px;
             }
         }
     }
