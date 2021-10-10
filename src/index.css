@@ -1,19 +1,19 @@
 body {
   margin: 0;
 
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-img{
+img {
   width: 100%;
 }
 
-*{
+* {
   padding: 0px;
   margin: 0px;
 }
