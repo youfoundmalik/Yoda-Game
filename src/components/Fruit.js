@@ -1,9 +1,18 @@
 import React from 'react'
+import { useDrag } from 'react-dnd'
 import './Fruit.scss'
 
-const Fruit = ({image,cal,price,classs,alt}) => {
+const Fruit = ({image,cal,price,classs,alt,id}) => {
+
+    const [{isDragging}, drag] = useDrag({
+        type: "card",
+        item: {id: id},
+        collect: (monitor) => ({
+            isDragging: !!monitor.isDragging()
+        })
+    });
     return (
-        <div className= {`level-one__fruit ${classs}`}>
+        <div id={id} className= {`level-one__fruit ${classs}`} style={{opacity: isDragging ? ".3" : ""}} ref={drag}>
             <img src={image} alt={alt}/>
             <div className="fruit__calories">
                 <span className="calories__number">{cal}</span>

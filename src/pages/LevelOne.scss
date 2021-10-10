@@ -20,7 +20,23 @@
         position: absolute;
         width: 16%;
         top: 37%;
-        left: 49%;
+        left: 50%;
+        display: grid;
+        justify-content: center;
+
+        .basket__counter{
+            z-index: 3;
+            font-size: 50px;
+            top: 70px;
+            position: relative;
+            color: aliceblue;
+        }
+
+        .basket{
+            z-index: 2;
+            position: absolute;
+            opacity: .9;
+        }
     }
 
     .Blueberry{

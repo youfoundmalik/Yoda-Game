@@ -5,11 +5,11 @@ import retry from '../images/sysIcon/Dark_Retry.png'
 import sound from '../images/sysIcon/Dark_SoundOff.png'
 import fullscreen from '../images/sysIcon/Dark_Fullscreen.png'
 
-const Footer = () => {
+const Footer = ({reset}) => {
     return (
         <div className="footer-area">
             <div className="footer__retry-area">
-                <div className="footer__retry">
+                <div className="footer__retry" onClick={reset}>
                     <div className="retry__image"><img src={retry} alt='Retry'/></div>
                     <p>Try Again!</p>
                 </div>

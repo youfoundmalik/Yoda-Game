@@ -3,9 +3,8 @@ import './Header.scss'
 
 import tagline from '../images/Tagline.png'
 import money from '../images/Yoda_Budget.png'
-import guage from '../images/Yoda_Gauge-100.png'
 
-const Header = ({amount}) => {
+const Header = ({amount,guage}) => {
     return (
         <div className="header-area">
             <div className="header__empty"></div>
