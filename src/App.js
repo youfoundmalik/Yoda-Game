@@ -1,15 +1,15 @@
-import './App.css';
-import { Helmet } from 'react-helmet';
-import LevelOne from './pages/LevelOne';
+import "./App.css";
+import LevelOne from "./pages/LevelOne";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App() {
   return (
-    <div className="App">
-      <Helmet>
-        <title>Yoda</title>
-      </Helmet>
-      <LevelOne/>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div className="App">
+        <LevelOne />
+      </div>
+    </DndProvider>
   );
 }
 
