@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import Header from "../components/Header";
+import { useDrop } from "react-dnd";
 import "./LevelOne.scss";
+
+import Header from "../components/Header";
+import Fruit from "../components/Fruit";
+import Footer from "../components/Footer";
+import BasketFruit from "../components/BasketFruit";
 
 import stall from "../images/Lvl1/Yoda_Stall.png";
 import basket from "../images/Lvl1/Basket.png";
-import Fruit from "../components/Fruit";
-
 import Banana from "../images/Lvl1/Yoda_Fruit-Banana.png";
 import Blueberry from "../images/Lvl1/Yoda_Fruit-Blueberry.png";
 import Cherry from "../images/Lvl1/Yoda_Fruit-Cherry.png";
 import Coconut from "../images/Lvl1/Yoda_Fruit-Coconut.png";
 import Pineapple from "../images/Lvl1/Yoda_Fruit-Pineapple.png";
 import Watermelon from "../images/Lvl1/Yoda_Fruit-Watermelon.png";
-import Footer from "../components/Footer";
-import { useDrop } from "react-dnd";
-import BasketFruit from "../components/BasketFruit";
 
 import guage0 from "../images/Yoda_Gauge-0.png";
 import guage25 from "../images/Yoda_Gauge-25.png";
@@ -29,7 +29,7 @@ const fruits = [
     fruit: "Banana",
     image: `${Banana}`,
     cal: "7",
-    price: "7",
+    price: 7,
     left: "10%",
     top: "25%",
   },
@@ -38,7 +38,7 @@ const fruits = [
     fruit: "Blueberry",
     image: `${Blueberry}`,
     cal: "5",
-    price: "2",
+    price: 2,
     left: "30%",
     top: "15%",
   },
@@ -47,7 +47,7 @@ const fruits = [
     fruit: "Cherry",
     image: `${Cherry}`,
     cal: "2",
-    price: "3",
+    price: 3,
     left: "25%",
     top: "55%",
   },
@@ -56,7 +56,7 @@ const fruits = [
     fruit: "Coconut",
     image: `${Coconut}`,
     cal: "8",
-    price: "10",
+    price: 10,
     left: "35%",
     top: "55%",
   },
@@ -65,7 +65,7 @@ const fruits = [
     fruit: "Pineapple",
     image: `${Pineapple}`,
     cal: "12",
-    price: "5",
+    price: 5,
     left: "60%",
     top: "55%",
   },
@@ -74,7 +74,7 @@ const fruits = [
     fruit: "Watermelon",
     image: `${Watermelon}`,
     cal: "4",
-    price: "8",
+    price: 8,
     left: "50%",
     top: "55%",
   },
@@ -88,27 +88,36 @@ const LevelOne = () => {
   const [cash, setCash] = useState(25);
   const [calories, setCalories] = useState(0);
 
-  const [{ isOver }, drop] = useDrop(() => ({
-    accept: "card",
-    drop: (item) => addFruitToBasket(item.id),
-    collect: (monitor) => ({
-      isOver: !!monitor.isOver(),
-    }),
-  }));
+  const [{ isOver }, drop] = useDrop(() => {
+    return {
+      accept: "card",
+      drop: (item) => {
+        return addFruitToBasket(item);
+      },
+      collect: (monitor) => ({
+        isOver: !!monitor.isOver(),
+      }),
+    };
+  }, [cash]);
 
-  const addFruitToBasket = (id) => {
-    var draggedFruit = fruitList.filter((fruit) => id === fruit.id);
+  const addFruitToBasket = ({ id }) => {
+
+    var draggedFruit = fruitList.find((v) => v.id === id);
+
+    if (cash < draggedFruit.price) {
+      return;
+    }
 
     setInBasket((inBasket) => {
-      return [...inBasket, { ...draggedFruit[0] }];
+      return [...inBasket, { ...draggedFruit }];
     });
 
     setFruitsList((fruitList) => {
       return fruitList.filter((fruit) => id !== fruit.id);
     });
 
-    setCash((cash) => {
-      return parseInt(cash) - parseInt(draggedFruit[0].price);
+    setCash((prev) => {
+      return parseInt(prev) - parseInt(draggedFruit.price);
     });
 
     setCounter((counter) => {
@@ -116,13 +125,9 @@ const LevelOne = () => {
     });
 
     setCalories((calories) => {
-      return parseInt(calories) + parseInt(draggedFruit[0].cal);
+      return parseInt(calories) + parseInt(draggedFruit.cal);
     });
   };
-
-  if (cash < 2) {
-    console.log(cash);
-  }
 
   const resetGame = () => {
     setInBasket([]);
@@ -144,7 +149,17 @@ const LevelOne = () => {
       <div className="level-one__container">
         <Header
           amount={cash}
-          guage={calories >= 32 ? guage100 : calories >= 24 ? guage75 : calories >= 16 ? guage50 : calories >= 8 ? guage25 : guage0}
+          guage={
+            calories >= 32
+              ? guage100
+              : calories >= 24
+              ? guage75
+              : calories >= 16
+              ? guage50
+              : calories >= 8
+              ? guage25
+              : guage0
+          }
         />
         <div className="level-one__stall">
           <img src={stall} alt="stall image" />
@@ -170,9 +185,10 @@ const LevelOne = () => {
             );
           })}
         </div>
-        {fruitList?.map(({ fruit, image, cal, price, id }) => {
+        {fruitList?.map(({ fruit, image, cal, price, id }, index) => {
           return (
             <Fruit
+              index={index}
               id={id}
               key={id}
               alt={fruit}

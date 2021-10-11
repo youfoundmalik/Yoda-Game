@@ -2,10 +2,10 @@ import React from "react";
 import { useDrag } from "react-dnd";
 import "./Fruit.scss";
 
-const Fruit = ({ image, cal, price, classs, alt, id }) => {
+const Fruit = ({ image, cal, price, classs, alt, id, index }) => {
   const [{ isDragging }, drag] = useDrag({
     type: "card",
-    item: { id: id },
+    item: { id, index },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
