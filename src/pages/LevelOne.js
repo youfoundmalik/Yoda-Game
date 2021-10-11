@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Fruit from "../components/Fruit";
 import Footer from "../components/Footer";
 import BasketFruit from "../components/BasketFruit";
+import NextLevelCard from "../components/NextLevelCard";
 
 import stall from "../images/Lvl1/Yoda_Stall.png";
 import basket from "../images/Lvl1/Basket.png";
@@ -16,12 +17,14 @@ import Cherry from "../images/Lvl1/Yoda_Fruit-Cherry.png";
 import Coconut from "../images/Lvl1/Yoda_Fruit-Coconut.png";
 import Pineapple from "../images/Lvl1/Yoda_Fruit-Pineapple.png";
 import Watermelon from "../images/Lvl1/Yoda_Fruit-Watermelon.png";
+import background from "../images/Lvl1/Yoda_Background.png";
 
 import guage0 from "../images/Yoda_Gauge-0.png";
 import guage25 from "../images/Yoda_Gauge-25.png";
 import guage50 from "../images/Yoda_Gauge-50.png";
 import guage75 from "../images/Yoda_Gauge-75.png";
 import guage100 from "../images/Yoda_Gauge-100.png";
+import ReactDOM from "react-dom";
 
 const fruits = [
   {
@@ -101,9 +104,8 @@ const LevelOne = () => {
   }, [cash]);
 
   const addFruitToBasket = ({ id }) => {
-
     var draggedFruit = fruitList.find((v) => v.id === id);
-
+    if (!draggedFruit) return;
     if (cash < draggedFruit.price) {
       return;
     }
@@ -141,11 +143,43 @@ const LevelOne = () => {
     setFruitsList(fruits);
   };
 
+  let tmp;
+  for (let i = fruitList.length - 1; i >= 0; i--) {
+    tmp = fruitList[i].price;
+    for (let j = 0; j < fruitList.length; j++) {
+      const selected = fruitList[j].price;
+      if (tmp > selected) {
+        tmp = selected;
+      }
+    }
+  }
+
   return (
     <>
       <Helmet>
         <title>Level One</title>
+        <meta name="description" content="The Yoda Game Level 1" />
       </Helmet>
+      {cash < tmp &&
+        ReactDOM.createPortal(
+          <NextLevelCard
+            guagefill={
+              calories >= 32
+                ? guage100
+                : calories >= 24
+                ? guage75
+                : calories >= 16
+                ? guage50
+                : calories >= 8
+                ? guage25
+                : guage0
+            }
+            level="Level 1"
+            backimg={background}
+            retryclicked={resetGame}
+          />,
+          document.getElementById("overlay")
+        )}
       <div className="level-one__container">
         <Header
           amount={cash}
@@ -162,10 +196,10 @@ const LevelOne = () => {
           }
         />
         <div className="level-one__stall">
-          <img src={stall} alt="stall image" />
+          <img src={stall} alt="stall" />
         </div>
         <div className="level-one__basket" ref={drop}>
-          <img src={basket} alt="basket image" className="basket" />
+          <img src={basket} alt={isOver ? "basket" : ""} className="basket" />
           <p
             className="basket__counter"
             style={{ opacity: counter === 0 ? "0" : "1" }}
