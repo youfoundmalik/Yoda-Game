@@ -157,7 +157,7 @@ const LevelOne = () => {
   return (
     <>
       <Helmet>
-        <title>Level One</title>
+        <title>Yoda Game - Level One</title>
         <meta name="description" content="The Yoda Game Level 1" />
       </Helmet>
       {cash < tmp &&
