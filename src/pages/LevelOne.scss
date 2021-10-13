@@ -81,6 +81,7 @@
 
 @media screen and (max-width: 500px) {
   .level-one__container {
+    background-color: #e3e8fe;
     background-image: url("../images/Lvl1/Yoda_Background.png");
 
     .level-one__stall {
@@ -106,32 +107,32 @@
 
     .Blueberry {
       left: 87%;
-      top: 38%;
+      top: 39%;
       width: 8%;
     }
     .Banana {
       left: 81%;
-      top: 47%;
+      top: 48%;
       width: 13%;
     }
     .Coconut {
       left: 70%;
-      top: 53%;
+      top: 55%;
       width: 15%;
     }
     .Watermelon {
       left: 54%;
-      top: 54.5%;
+      top: 56.5%;
       width: 12%;
     }
     .Cherry {
       left: 40%;
-      top: 53%;
+      top: 55%;
       width: 8%;
     }
     .Pineapple {
       left: 25%;
-      top: 50%;
+      top: 52%;
       width: 14%;
       justify-content: start !important;
 
