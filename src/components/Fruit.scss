@@ -32,12 +32,13 @@
 
 @media screen and (max-width: 500px) {
   .level-one__fruit {
+    width: 8% !important;
     .fruit__calories {
-      font-size: 18px;
+      font-size: 14px;
     }
 
     .fruit__price {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 

@@ -42,28 +42,28 @@
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   .footer-area {
-  
+    padding-bottom: 5px;
     .footer__retry-area {
       .footer__retry {
         width: 50%;
         .retry__image {
-          width: 25px;
+          width: 18px;
         }
         p {
-          font-size: 18px;
+          font-size: 12px;
         }
       }
     }
-  
+
     .footer__others {
       .footer__sound {
-        width: 20px;
+        width: 15px;
         cursor: pointer;
       }
       .footer__fullscreen {
-        width: 20px;
+        width: 15px;
         cursor: pointer;
       }
     }

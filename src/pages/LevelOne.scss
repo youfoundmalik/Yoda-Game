@@ -81,16 +81,18 @@
 
 @media screen and (max-width: 500px) {
   .level-one__container {
+    height: 300px;
     background-color: #e3e8fe;
     background-image: url("../images/Lvl1/Yoda_Background.png");
+    background-size: cover;
 
     .level-one__stall {
-      top: 40%;
+      top: 40px;
       left: -5%;
     }
 
     .level-one__basket {
-      top: 47%;
+      top: 130px;
       left: 48%;
 
       .basket__counter {
@@ -107,32 +109,32 @@
 
     .Blueberry {
       left: 87%;
-      top: 39%;
+      top: 100px;
       width: 8%;
     }
     .Banana {
       left: 81%;
-      top: 48%;
+      top: 170px;
       width: 13%;
     }
     .Coconut {
-      left: 70%;
-      top: 55%;
+      left: 68%;
+      top: 210px;
       width: 15%;
     }
     .Watermelon {
       left: 54%;
-      top: 56.5%;
+      top: 240px;
       width: 12%;
     }
     .Cherry {
       left: 40%;
-      top: 55%;
+      top: 222px;
       width: 8%;
     }
     .Pineapple {
       left: 25%;
-      top: 52%;
+      top: 200px;
       width: 14%;
       justify-content: start !important;
 
