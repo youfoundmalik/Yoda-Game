@@ -41,3 +41,31 @@
     }
   }
 }
+
+@media screen and (max-width: 500px){
+  .footer-area {
+  
+    .footer__retry-area {
+      .footer__retry {
+        width: 50%;
+        .retry__image {
+          width: 25px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    .footer__others {
+      .footer__sound {
+        width: 20px;
+        cursor: pointer;
+      }
+      .footer__fullscreen {
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}

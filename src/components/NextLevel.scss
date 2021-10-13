@@ -64,3 +64,48 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .overlay {
+    .card-container__ {
+      gap: 20px;
+      width: 100%;
+      .congrats {
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+
+        img {
+          width: 10%;
+        }
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+      .next {
+        display: grid;
+        gap: 20px;
+        justify-items: center;
+
+        img {
+          width: 30%;
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+      .retry {
+        img {
+          width: 15px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

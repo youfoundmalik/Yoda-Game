@@ -29,3 +29,24 @@
   position: absolute;
   z-index: 1;
 }
+
+@media screen and (max-width: 500px) {
+  .level-one__fruit {
+    .fruit__calories {
+      font-size: 18px;
+    }
+
+    .fruit__price {
+      font-size: 14px;
+    }
+  }
+
+  .fruit-in-basket {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 40%;
+    position: absolute;
+    z-index: 1;
+  }
+}

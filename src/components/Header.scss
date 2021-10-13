@@ -50,3 +50,36 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .header-area {
+    grid-template-columns: 0fr 4fr 2fr;
+    gap: 10px;
+
+    .header__tagline {
+      width: 100%;
+    }
+
+    .header__dynamic-area {
+      grid-template-columns: 3fr 2fr;
+
+      .dynamic-area__money {
+        gap: 5px;
+
+        .money__image {
+          padding-top: 5px;
+        }
+
+        .money__amount {
+          font-size: 18px;
+        }
+      }
+
+      .dynamic-area__bar {
+        .bar__guage {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
