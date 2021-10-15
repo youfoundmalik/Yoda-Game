@@ -51,7 +51,17 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 1000px) {
+  .header-area {
+    padding-top: 10px;
+    grid-template-columns:  1fr 3fr 2fr;
+    gap: 10px;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .header-area {
     padding-top: 10px;
     grid-template-columns: 1fr 2fr 1fr;

@@ -25,13 +25,29 @@
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
-  width: 40%;
+  width: 0%;
   position: absolute;
   z-index: 1;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .level-one__fruit {
+    position: relative;
+  }
+
+  .fruit-in-basket {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 40%;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .level-one__fruit {
+    position: absolute;
     width: 8% !important;
     .fruit__calories {
       font-size: 14px;

@@ -36,13 +36,45 @@
       cursor: pointer;
     }
     .footer__fullscreen {
+      display: none;
       width: 25px;
       cursor: pointer;
     }
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
+  .footer-area {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 5px;
+    .footer__retry-area {
+      .footer__retry {
+        justify-items: flex-start;
+        width: 50%;
+        .retry__image {
+          width: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .footer__others {
+      .footer__sound {
+        width: 30px;
+        cursor: pointer;
+      }
+      .footer__fullscreen {
+        width: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
   .footer-area {
     padding-bottom: 5px;
     .footer__retry-area {
@@ -63,6 +95,7 @@
         cursor: pointer;
       }
       .footer__fullscreen {
+        display: block;
         width: 15px;
         cursor: pointer;
       }

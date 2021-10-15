@@ -65,11 +65,12 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 630px) {
   .overlay {
+    // height: 300px;
     .card-container__ {
       gap: 20px;
-      width: 100%;
+      width: 90%;
       .congrats {
         display: grid;
         gap: 10px;
