@@ -1,6 +1,6 @@
 .level-one__container {
   display: grid;
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -83,68 +83,71 @@
 
 @media screen and (max-width: 1000px) {
   .level-one__container {
-    height: 100vw;
+    height: 50vh;
     background-color: #e3e8fe;
     background-image: url("../images/Lvl1/Yoda_Background.png");
     background-size: cover;
 
     .level-one__stall {
-      width: 35%;
-      top: 40vw;
+      width: 30vh;
+      top: 5vh;
       left: -5%;
     }
 
     .level-one__basket {
-      top: 50vw;
+      top: 23vh;
       left: 48%;
 
       .basket__counter {
-        font-size: 40px;
-        top: 4vw;
+        position: relative;
+        font-size: 35px;
+        top: -5vh;
       }
 
       .basket {
+        position: relative;
       }
     }
 
     .Blueberry {
       left: 87%;
-      top: 30vw;
-      width: 8%;
+      top: 20vh;
+      width: 5vh;
     }
     .Banana {
       left: 81%;
-      top: 50vw;
-      width: 13%;
+      top: 33vh;
+      width: 9vh;
     }
     .Coconut {
-      left: 72%;
-      top: 70vw;
-      width: 15%;
+      left: 68%;
+      top: 36vh;
+      width: 8vh;
     }
     .Watermelon {
-      left: 55%;
-      top: 80vw;
-      width: 12%;
+      left: 50%;
+      top: 37.5vh;
+      width: 8vh;
     }
     .Cherry {
-      left: 40%;
-      top: 80vw;
-      width: 8%;
+      left: 35%;
+      top: 33vh;
+      width: 5vh;
     }
     .Pineapple {
-      left: 22%;
-      top: 70vw;
-      width: 14%;
+      left: 20%;
+      top: 25vh;
+      width: 12vh;
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .level-one__container {
     height: 300px;
 
     .level-one__stall {
+      width: 35%;
       top: 40px;
       left: -5%;
     }
