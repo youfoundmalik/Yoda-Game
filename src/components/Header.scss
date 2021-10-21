@@ -24,7 +24,7 @@
       gap: 10px;
 
       .money__image {
-        width: 40%;
+        width: 40px;
         padding-top: 10px;
       }
 
@@ -46,6 +46,82 @@
 
       .bar__guage {
         width: 30%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .header-area {
+    padding-top: 10px;
+    grid-template-columns:  1fr 3fr 2fr;
+    gap: 10px;
+    z-index: 1;
+
+    .header__empty {
+    }
+  
+    .header__tagline {
+    }
+  
+    .header__dynamic-area {
+  
+      .dynamic-area__money {
+  
+        .money__image {
+          width: 40px;
+        }
+  
+        .money__amount {
+          font-size: 32px;
+  
+          .amount__figure {
+          }
+        }
+      }
+  
+      .dynamic-area__bar {
+  
+        .bar__guage {
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-area {
+    padding-top: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    z-index: 1;
+
+    .header__tagline {
+      width: 100%;
+    }
+
+    .header__dynamic-area {
+      grid-template-columns: 3fr 2fr;
+
+      .dynamic-area__money {
+        gap: 5px;
+
+        .money__image {
+          padding-top: 5px;
+          width: 20px;
+        }
+
+        .money__amount {
+          font-size: 18px;
+        }
+      }
+
+      .dynamic-area__bar {
+        .bar__guage {
+          width: 18px;
+        }
       }
     }
   }
