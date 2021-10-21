@@ -4,12 +4,15 @@ import "./NextLevel.scss";
 import nextlevel from "../images/Yoda_Next-Level.png";
 import retry from "../images/sysIcon/Dark_Retry.png";
 
-const NextLevelCard = ({ level, guagefill, backimg, retryclicked }) => {
+const NextLevelCard = ({ level, guagefill, backimg, retryclicked, rotate }) => {
   return (
     <div className="overlay">
       <div
         className="card-container__"
-        style={{ backgroundImage: `url(${backimg})` }}
+        style={{
+          backgroundImage: `url(${backimg})`,
+          transform: `rotate(${rotate})`,
+        }}
       >
         <div className="congrats">
           <h1>Congratulations</h1>

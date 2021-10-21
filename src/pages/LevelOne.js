@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useDrop } from "react-dnd";
 import "./LevelOne.scss";
+import "./LevelOneLandscape.scss";
 
 import Header from "../components/Header";
 import Fruit from "../components/Fruit";
@@ -84,6 +85,7 @@ const fruits = [
 ];
 
 const LevelOne = () => {
+  const [landscape, setLandscape] = useState(false);
   const [fruitList, setFruitsList] = useState(fruits);
 
   const [inBasket, setInBasket] = useState([]);
@@ -143,6 +145,14 @@ const LevelOne = () => {
     setFruitsList(fruits);
   };
 
+  const landscapeHandler = () => {
+    if (!landscape) {
+      setLandscape(true);
+    } else {
+      setLandscape(false);
+    }
+  };
+
   let tmp;
   for (let i = fruitList.length - 1; i >= 0; i--) {
     tmp = fruitList[i].price;
@@ -160,10 +170,32 @@ const LevelOne = () => {
         <title>Yoda Game - Level One</title>
         <meta name="description" content="The Yoda Game Level 1" />
       </Helmet>
-      {cash < tmp &&
-        ReactDOM.createPortal(
-          <NextLevelCard
-            guagefill={
+      <div className={!landscape ? "landscape-deactive" : "landscape-active"}>
+        {cash < tmp &&
+          ReactDOM.createPortal(
+            <NextLevelCard
+              rotate={!landscape ? "" : "90deg"}
+              guagefill={
+                calories >= 32
+                  ? guage100
+                  : calories >= 24
+                  ? guage75
+                  : calories >= 16
+                  ? guage50
+                  : calories >= 8
+                  ? guage25
+                  : guage0
+              }
+              level="Level 1"
+              backimg={background}
+              retryclicked={resetGame}
+            />,
+            document.getElementById("overlay")
+          )}
+        <div className="level-one__container">
+          <Header
+            amount={cash}
+            guage={
               calories >= 32
                 ? guage100
                 : calories >= 24
@@ -174,66 +206,47 @@ const LevelOne = () => {
                 ? guage25
                 : guage0
             }
-            level="Level 1"
-            backimg={background}
-            retryclicked={resetGame}
-          />,
-          document.getElementById("overlay")
-        )}
-      <div className="level-one__container">
-        <Header
-          amount={cash}
-          guage={
-            calories >= 32
-              ? guage100
-              : calories >= 24
-              ? guage75
-              : calories >= 16
-              ? guage50
-              : calories >= 8
-              ? guage25
-              : guage0
-          }
-        />
-        <div className="level-one__stall">
-          <img src={stall} alt="stall" />
-        </div>
-        <div className="level-one__basket" ref={drop}>
-          <img src={basket} alt={isOver ? "basket" : ""} className="basket" />
-          <p
-            className="basket__counter"
-            style={{ opacity: counter === 0 ? "0" : "1" }}
-          >
-            {counter}
-          </p>
-          {inBasket?.map(({ fruit, image, id, left, top }) => {
+          />
+          <div className="level-one__stall">
+            <img src={stall} alt="stall" />
+          </div>
+          <div className="level-one__basket" ref={drop}>
+            <img src={basket} alt={isOver ? "basket" : ""} className="basket" />
+            <p
+              className="basket__counter"
+              style={{ opacity: counter === 0 ? "0" : "1" }}
+            >
+              {counter}
+            </p>
+            {inBasket?.map(({ fruit, image, id, left, top }) => {
+              return (
+                <BasketFruit
+                  id={id}
+                  key={id}
+                  alt={fruit}
+                  image={image}
+                  left={left}
+                  top={top}
+                />
+              );
+            })}
+          </div>
+          {fruitList?.map(({ fruit, image, cal, price, id }, index) => {
             return (
-              <BasketFruit
+              <Fruit
+                index={index}
                 id={id}
                 key={id}
                 alt={fruit}
+                classs={fruit}
                 image={image}
-                left={left}
-                top={top}
+                cal={cal}
+                price={price}
               />
             );
           })}
+          <Footer reset={resetGame} flip={landscapeHandler} />
         </div>
-        {fruitList?.map(({ fruit, image, cal, price, id }, index) => {
-          return (
-            <Fruit
-              index={index}
-              id={id}
-              key={id}
-              alt={fruit}
-              classs={fruit}
-              image={image}
-              cal={cal}
-              price={price}
-            />
-          );
-        })}
-        <Footer reset={resetGame} />
       </div>
     </>
   );

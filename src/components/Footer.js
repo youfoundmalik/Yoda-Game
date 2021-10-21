@@ -5,7 +5,7 @@ import retry from "../images/sysIcon/Dark_Retry.png";
 import sound from "../images/sysIcon/Dark_SoundOff.png";
 import fullscreen from "../images/sysIcon/Dark_Fullscreen.png";
 
-const Footer = ({ reset }) => {
+const Footer = ({ reset,flip }) => {
   return (
     <div className="footer-area">
       <div className="footer__retry-area">
@@ -21,7 +21,7 @@ const Footer = ({ reset }) => {
           <img src={sound} alt="Sound" />
         </div>
         <div className="footer__fullscreen">
-          <img src={fullscreen} alt="Fullscreen" />
+          <img src={fullscreen} alt="Fullscreen" onClick={flip}/>
         </div>
       </div>
     </div>
