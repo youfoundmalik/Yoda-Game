@@ -48,6 +48,24 @@
   }
 }
 
+@media screen and (max-width: 1000px) and (max-height: 500px) {
+  .level-one__fruit {
+    position: absolute;
+    width: 8% !important;
+    .fruit__calories {
+      font-size: 14px !important;
+    }
+
+    .fruit__price {
+      font-size: 12px !important;
+    }
+  }
+
+  .fruit-in-basket {
+    width: 0%;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .level-one__fruit {
     .fruit__calories {
