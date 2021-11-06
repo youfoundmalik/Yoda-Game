@@ -4,27 +4,27 @@ import { useDrop } from "react-dnd";
 import "./LevelOne.scss";
 import "./LevelOneLandscape.scss";
 
-import Header from "../components/Header";
-import Fruit from "../components/Fruit";
-import Footer from "../components/Footer";
-import BasketFruit from "../components/BasketFruit";
-import NextLevelCard from "../components/NextLevelCard";
+import Header from "../../components/Header";
+import Fruit from "../../components/Fruit";
+import Footer from "../../components/Footer";
+import BasketFruit from "../../components/BasketFruit";
+import NextLevelCard from "../../components/NextLevelCard";
 
-import stall from "../images/Lvl1/Yoda_Stall.png";
-import basket from "../images/Lvl1/Basket.png";
-import Banana from "../images/Lvl1/Yoda_Fruit-Banana.png";
-import Blueberry from "../images/Lvl1/Yoda_Fruit-Blueberry.png";
-import Cherry from "../images/Lvl1/Yoda_Fruit-Cherry.png";
-import Coconut from "../images/Lvl1/Yoda_Fruit-Coconut.png";
-import Pineapple from "../images/Lvl1/Yoda_Fruit-Pineapple.png";
-import Watermelon from "../images/Lvl1/Yoda_Fruit-Watermelon.png";
-import background from "../images/Lvl1/Yoda_Background.png";
+import stall from "../../images/Lvl1/Yoda_Stall.png";
+import basket from "../../images/Lvl1/Basket.png";
+import Banana from "../../images/Lvl1/Yoda_Fruit-Banana.png";
+import Blueberry from "../../images/Lvl1/Yoda_Fruit-Blueberry.png";
+import Cherry from "../../images/Lvl1/Yoda_Fruit-Cherry.png";
+import Coconut from "../../images/Lvl1/Yoda_Fruit-Coconut.png";
+import Pineapple from "../../images/Lvl1/Yoda_Fruit-Pineapple.png";
+import Watermelon from "../../images/Lvl1/Yoda_Fruit-Watermelon.png";
+import background from "../../images/Lvl1/Yoda_Background.png";
 
-import guage0 from "../images/Yoda_Gauge-0.png";
-import guage25 from "../images/Yoda_Gauge-25.png";
-import guage50 from "../images/Yoda_Gauge-50.png";
-import guage75 from "../images/Yoda_Gauge-75.png";
-import guage100 from "../images/Yoda_Gauge-100.png";
+import guage0 from "../../images/Yoda_Gauge-0.png";
+import guage25 from "../../images/Yoda_Gauge-25.png";
+import guage50 from "../../images/Yoda_Gauge-50.png";
+import guage75 from "../../images/Yoda_Gauge-75.png";
+import guage100 from "../../images/Yoda_Gauge-100.png";
 import ReactDOM from "react-dom";
 
 const fruits = [

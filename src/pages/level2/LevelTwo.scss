@@ -3,12 +3,11 @@
   align-items: flex-start;
   .level-one__container {
     display: grid;
-    // padding-bottom: 1rem;
     position: relative;
     width: 100vw;
     height: 100vh;
     background-color: #e3e8fe;
-    background-image: url("../images/Lvl1/Yoda_Background.png");
+    background-image: url("../../images/Lvl2/Yoda_Background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -91,7 +90,7 @@
     .level-one__container {
       height: 50vh;
       background-color: #e3e8fe;
-      background-image: url("../images/Lvl1/Yoda_Background.png");
+      background-image: url("../../images/Lvl2/Yoda_Background.png");
       background-size: cover;
   
       .level-one__stall {
@@ -224,7 +223,7 @@
       height: 100vh;
       overflow: hidden !important;
       background-color: #e3e8fe;
-      background-image: url("../images/Lvl1/Yoda_Background.png");
+      background-image: url("../../images/Lvl2/Yoda_Background.png");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
