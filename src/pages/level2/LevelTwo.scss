@@ -11,27 +11,51 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-  
-    .level-one__stall {
-      position: absolute;
-      width: 35%;
-      top: 50px;
-      left: -50px;
-      z-index: 1;
+
+    .header-area{
+      display: grid;
+      grid-template-columns: 60% 40%;
+      .header__dynamic-area{
+        display: grid;
+        justify-content: flex-start;
+        grid-template-columns: 1fr 4fr;
+        align-items: flex-start;
+        gap: 5%;
+        .dynamic-area__money{
+          margin-top: 10%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          // .money__image{
+          //   margin-top: -5px;
+          //   width:35px;
+          // }
+          // .money__amount{
+          //   font-size: 24px;
+          // }
+        }
+        .dynamic-area__bar{
+          display: flex;
+          justify-content: flex-start;
+          .bar__guage{
+            width: 50px;
+          }
+        }
+      }
     }
   
     .level-one__basket {
       position: absolute;
-      width: 16%;
-      top: 37%;
-      left: 50%;
+      width: 35%;
+      top: 10%;
+      left: 30%;
       display: grid;
       justify-content: center;
   
       .basket__counter {
         z-index: 3;
-        font-size: 50px;
-        top: 70px;
+        font-size: 70px;
+        top: 190px;
         position: relative;
         color: aliceblue;
       }
@@ -43,43 +67,29 @@
       }
     }
   
-    .Blueberry {
-      left: 87%;
-      top: 25%;
-      width: 8%;
+    .Pavement {
+      left: 82%;
+      top: 5%;
     }
-    .Banana {
-      left: 81%;
-      top: 50%;
-      width: 13%;
+    .Pavement2 {
+      left: 80%;
+      top: 21%;
     }
-    .Coconut {
+    .Bridge {
+      left: 75%;
+      top: 37%;
+    }
+    .Bridge2 {
       left: 70%;
-      top: 71%;
-      width: 13%;
+      top: 53%;
     }
-    .Watermelon {
-      left: 54%;
-      top: 76.5%;
-      width: 12%;
+    .Equipment {
+      left: 63%;
+      top: 69%;
     }
-    .Cherry {
-      left: 40%;
-      top: 73%;
-      width: 8%;
-    }
-    .Pineapple {
-      left: 25%;
-      top: 60%;
-      width: 14%;
-      justify-content: start !important;
-  
-      .fruit__calories {
-        margin-right: 40%;
-      }
-      .fruit__price {
-        margin-right: 40%;
-      }
+    .Fleet {
+      left: 55%;
+      top: 85%;
     }
   }
 }

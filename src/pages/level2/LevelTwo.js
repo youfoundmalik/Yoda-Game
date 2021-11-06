@@ -26,6 +26,7 @@ import guage25 from "../../images/Yoda_Gauge-25.png";
 import guage50 from "../../images/Yoda_Gauge-50.png";
 import guage75 from "../../images/Yoda_Gauge-75.png";
 import guage100 from "../../images/Yoda_Gauge-100.png";
+import money from "../../images/Yoda_Budget.png";
 
 const tiles = [
   {
@@ -167,8 +168,8 @@ const LevelTwo = () => {
   return (
     <>
       <Helmet>
-        <title>Yoda Game - Level One</title>
-        <meta name="description" content="The Yoda Game Level 1" />
+        <title>Yoda Game - Level Two</title>
+        <meta name="description" content="The Yoda Game Level 2" />
       </Helmet>
       <div className={!landscape ? "landscape-deactive" : "landscape-active"}>
         {cash < tmp &&
@@ -193,22 +194,36 @@ const LevelTwo = () => {
             document.getElementById("overlay")
           )}
         <div className="level-one__container">
-          <Header
-            amount={cash}
-            guage={
-              percentage >= 32
-                ? guage100
-                : percentage >= 24
-                ? guage75
-                : percentage >= 16
-                ? guage50
-                : percentage >= 8
-                ? guage25
-                : guage0
-            }
-          />
-          <div className="level-one__stall">
-            <img src={stall} alt="stall" />
+          <div className="header-area">
+            <div className="header__empty"></div>
+            <div className="header__dynamic-area">
+              <div className="dynamic-area__money">
+                <span className="money__image">
+                  <img src={money} alt="money" />
+                </span>
+                <span className="money__amount">
+                  $<p className="amount__figure">{cash}</p>
+                </span>
+              </div>
+              <div className="dynamic-area__bar">
+                <div className="bar__guage">
+                  <img
+                    src={
+                      percentage >= 32
+                        ? guage100
+                        : percentage >= 24
+                        ? guage75
+                        : percentage >= 16
+                        ? guage50
+                        : percentage >= 8
+                        ? guage25
+                        : guage0
+                    }
+                    alt="guage"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="level-one__basket" ref={drop}>
             <img src={basket} alt={isOver ? "basket" : ""} className="basket" />

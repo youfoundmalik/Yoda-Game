@@ -17,14 +17,16 @@ const Tile = ({ image, percent, price, classs, alt, id, index }) => {
       style={{ opacity: isDragging ? "0" : "" }}
       ref={drag}
     >
-      <img src={image} alt={alt} />
-      <div className="tile__percentage">
-        <span className="percentage__number">{percent}</span>
-        <span className="percentage__text">%</span>
-      </div>
-      <div className="tile__price">
-        <span className="price__symbol">$</span>
-        <span className="price__number">{price}</span>
+      <div className="level-two__tile_img"><img src={image} alt={alt} /></div>
+      <div className="level-two__tile_text">
+        <div className="tile__percentage">
+          <span className="percentage__number">{percent}</span>
+          <span className="percentage__text">%</span>
+        </div>
+        <div className="tile__price">
+          <span className="price__symbol">$</span>
+          <span className="price__number">{price}</span>
+        </div>
       </div>
     </div>
   );
