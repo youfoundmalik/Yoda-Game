@@ -1,7 +1,7 @@
-.landscape-deactive{
+.landscape-deactive {
   display: grid;
   align-items: flex-start;
-  .level-one__container {
+  .level-two__container {
     display: grid;
     position: relative;
     width: 100vw;
@@ -12,61 +12,67 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    .header-area{
+    .header-area {
+      padding-top: 15px;
       display: grid;
       grid-template-columns: 60% 40%;
-      .header__dynamic-area{
+      .header__dynamic-area {
         display: grid;
         justify-content: flex-start;
         grid-template-columns: 1fr 4fr;
         align-items: flex-start;
         gap: 5%;
-        .dynamic-area__money{
+        .dynamic-area__money {
           margin-top: 10%;
+          gap: 10px;
           display: flex;
           justify-content: flex-end;
           align-items: center;
-          // .money__image{
-          //   margin-top: -5px;
-          //   width:35px;
-          // }
-          // .money__amount{
-          //   font-size: 24px;
-          // }
+          .money__image {
+            margin-top: -5px;
+            width: 40px;
+            padding-top: 10px;
+          }
+          .money__amount {
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+          }
         }
-        .dynamic-area__bar{
+        .dynamic-area__bar {
           display: flex;
           justify-content: flex-start;
-          .bar__guage{
+          .bar__guage {
             width: 50px;
           }
         }
       }
     }
-  
-    .level-one__basket {
+
+    .level-two__map {
       position: absolute;
       width: 35%;
       top: 10%;
       left: 30%;
       display: grid;
       justify-content: center;
-  
-      .basket__counter {
+
+      .map__counter {
         z-index: 3;
         font-size: 70px;
         top: 190px;
         position: relative;
         color: aliceblue;
       }
-  
-      .basket {
+
+      .map {
         z-index: 2;
         position: absolute;
         opacity: 1;
       }
     }
-  
+
     .Pavement {
       left: 82%;
       top: 5%;
@@ -94,36 +100,35 @@
   }
 }
 
-
 @media screen and (max-width: 1000px) {
-  .landscape-deactive{
+  .landscape-deactive {
     .level-one__container {
       height: 50vh;
       background-color: #e3e8fe;
       background-image: url("../../images/Lvl2/Yoda_Background.png");
       background-size: cover;
-  
+
       .level-one__stall {
         width: 30vh;
         top: 5vh;
         left: -5%;
       }
-  
+
       .level-one__basket {
         top: 23vh;
         left: 48%;
-  
+
         .basket__counter {
           position: relative;
           font-size: 35px;
           top: -5vh;
         }
-  
+
         .basket {
           position: relative;
         }
       }
-  
+
       .Blueberry {
         left: 87%;
         top: 20vh;
@@ -156,36 +161,35 @@
       }
     }
   }
-  
 }
 
 @media screen and (max-width: 500px) {
-  .landscape-deactive{
+  .landscape-deactive {
     .level-one__container {
       height: 300px;
-  
+
       .level-one__stall {
         width: 35%;
         top: 40px;
         left: -5%;
       }
-  
+
       .level-one__basket {
         top: 130px;
         left: 48%;
-  
+
         .basket__counter {
           font-size: 20px;
           top: 70%;
         }
-  
+
         .basket {
           z-index: 2;
           position: absolute;
           opacity: 0.9;
         }
       }
-  
+
       .Blueberry {
         left: 87%;
         top: 100px;
@@ -218,7 +222,6 @@
       }
     }
   }
-  
 }
 
 @media screen and (max-width: 1000px) and (max-height: 500px) {
@@ -227,7 +230,7 @@
     justify-content: center;
     align-content: center;
     height: 100vh;
-  
+
     .level-one__container {
       width: 100vw;
       height: 100vh;
@@ -240,14 +243,14 @@
       display: grid;
       grid-template-rows: 1fr 2fr 1fr;
       position: relative;
-  
+
       .level-one__stall {
         position: absolute;
         width: 30%;
         top: 50px;
         z-index: 1;
       }
-  
+
       .level-one__basket {
         position: absolute;
         width: 16%;
@@ -255,7 +258,7 @@
         left: 50%;
         display: grid;
         justify-content: center;
-  
+
         .basket__counter {
           z-index: 3;
           font-size: 50px;
@@ -263,14 +266,14 @@
           position: relative;
           color: aliceblue;
         }
-  
+
         .basket {
           z-index: 2;
           position: absolute;
           opacity: 1;
         }
       }
-  
+
       .Blueberry {
         left: 87%;
         top: 25%;
@@ -301,7 +304,7 @@
         top: 60%;
         width: 14%;
         justify-content: start !important;
-  
+
         .fruit__calories {
           margin-right: 40%;
         }

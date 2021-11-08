@@ -5,14 +5,11 @@ import { useDrop } from "react-dnd";
 import "./LevelTwo.scss";
 import "./LevelTwoLandscape.scss";
 
-import Header from "../../components/Header";
 import Tile from "../../components/Tile";
 import Footer from "../../components/Footer";
-import BasketFruit from "../../components/BasketFruit";
 import NextLevelCard from "../../components/NextLevelCard";
 
-import stall from "../../images/Lvl1/Yoda_Stall.png";
-import basket from "../../images/Lvl2/Map.png";
+import map from "../../images/Lvl2/Map.png";
 import Pavement from "../../images/Lvl2/Yoda_Icon-Pavement.png";
 import Pavement2 from "../../images/Lvl2/Yoda_Icon-Pavement2.png";
 import Bridge from "../../images/Lvl2/Yoda_Icon-Bridge.png";
@@ -89,7 +86,7 @@ const LevelTwo = () => {
   const [landscape, setLandscape] = useState(false);
   const [tileList, setTilesList] = useState(tiles);
 
-  const [onBridge, setOnBridge] = useState([]);
+  // const [onBridge, setOnBridge] = useState([]);
   const [counter, setCounter] = useState(0);
   const [cash, setCash] = useState(25000);
   const [percentage, setPercentage] = useState(0);
@@ -113,9 +110,9 @@ const LevelTwo = () => {
       return;
     }
 
-    setOnBridge((onBridge) => {
-      return [...onBridge, { ...draggedTile }];
-    });
+    // setOnBridge((onBridge) => {
+    //   return [...onBridge, { ...draggedTile }];
+    // });
 
     setTilesList((tileList) => {
       return tileList.filter((tile) => id !== tile.id);
@@ -135,7 +132,7 @@ const LevelTwo = () => {
   };
 
   const resetGame = () => {
-    setOnBridge([]);
+    // setOnBridge([]);
 
     setCash(25000);
 
@@ -187,13 +184,14 @@ const LevelTwo = () => {
                   ? guage25
                   : guage0
               }
-              level="Level 1"
+              level="Level 2"
               backimg={background}
               retryclicked={resetGame}
+              path="/level3"
             />,
             document.getElementById("overlay")
           )}
-        <div className="level-one__container">
+        <div className="level-two__container">
           <div className="header-area">
             <div className="header__empty"></div>
             <div className="header__dynamic-area">
@@ -225,26 +223,14 @@ const LevelTwo = () => {
               </div>
             </div>
           </div>
-          <div className="level-one__basket" ref={drop}>
-            <img src={basket} alt={isOver ? "basket" : ""} className="basket" />
+          <div className="level-two__map" ref={drop}>
+            <img src={map} alt={isOver ? "map" : ""} className="map" />
             <p
-              className="basket__counter"
+              className="map__counter"
               style={{ opacity: counter === 0 ? "0" : "1" }}
             >
               {counter}
             </p>
-            {onBridge?.map(({ tile, image, id, left, top }) => {
-              return (
-                <BasketFruit
-                  id={id}
-                  key={id}
-                  alt={tile}
-                  image={image}
-                  left={left}
-                  top={top}
-                />
-              );
-            })}
           </div>
           {tileList?.map(({ tile, image, percent, price, id }, index) => {
             return (

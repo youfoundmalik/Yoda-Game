@@ -7,7 +7,6 @@ import "./LevelOneLandscape.scss";
 import Header from "../../components/Header";
 import Fruit from "../../components/Fruit";
 import Footer from "../../components/Footer";
-import BasketFruit from "../../components/BasketFruit";
 import NextLevelCard from "../../components/NextLevelCard";
 
 import stall from "../../images/Lvl1/Yoda_Stall.png";
@@ -88,7 +87,7 @@ const LevelOne = () => {
   const [landscape, setLandscape] = useState(false);
   const [fruitList, setFruitsList] = useState(fruits);
 
-  const [inBasket, setInBasket] = useState([]);
+  // const [inBasket, setInBasket] = useState([]);
   const [counter, setCounter] = useState(0);
   const [cash, setCash] = useState(25);
   const [calories, setCalories] = useState(0);
@@ -112,9 +111,9 @@ const LevelOne = () => {
       return;
     }
 
-    setInBasket((inBasket) => {
-      return [...inBasket, { ...draggedFruit }];
-    });
+    // setInBasket((inBasket) => {
+    //   return [...inBasket, { ...draggedFruit }];
+    // });
 
     setFruitsList((fruitList) => {
       return fruitList.filter((fruit) => id !== fruit.id);
@@ -134,7 +133,7 @@ const LevelOne = () => {
   };
 
   const resetGame = () => {
-    setInBasket([]);
+    // setInBasket([]);
 
     setCash(25);
 
@@ -189,6 +188,7 @@ const LevelOne = () => {
               level="Level 1"
               backimg={background}
               retryclicked={resetGame}
+              path= "/level2"
             />,
             document.getElementById("overlay")
           )}
@@ -218,7 +218,7 @@ const LevelOne = () => {
             >
               {counter}
             </p>
-            {inBasket?.map(({ fruit, image, id, left, top }) => {
+            {/* {inBasket?.map(({ fruit, image, id, left, top }) => {
               return (
                 <BasketFruit
                   id={id}
@@ -229,7 +229,7 @@ const LevelOne = () => {
                   top={top}
                 />
               );
-            })}
+            })} */}
           </div>
           {fruitList?.map(({ fruit, image, cal, price, id }, index) => {
             return (

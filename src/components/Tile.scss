@@ -1,11 +1,11 @@
 .level-two__tile {
   display: flex;
   text-align: center;
-  // width: 8%;
   position: absolute;
   align-items: center;
-  z-index: 2;
+  z-index: 99;
   gap: 0px;
+  cursor: pointer;
 
   animation-name: pulse;
   animation-duration: 1s;
