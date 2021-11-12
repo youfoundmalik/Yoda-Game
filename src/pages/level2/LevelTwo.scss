@@ -102,62 +102,65 @@
 
 @media screen and (max-width: 1000px) {
   .landscape-deactive {
-    .level-one__container {
+    .level-two__container {
       height: 50vh;
-      background-color: #e3e8fe;
+      width: 100%;
       background-image: url("../../images/Lvl2/Yoda_Background.png");
       background-size: cover;
 
-      .level-one__stall {
-        width: 30vh;
-        top: 5vh;
-        left: -5%;
-      }
-
-      .level-one__basket {
-        top: 23vh;
-        left: 48%;
-
-        .basket__counter {
-          position: relative;
-          font-size: 35px;
-          top: -5vh;
-        }
-
-        .basket {
-          position: relative;
+      .header-area {
+        padding-top: 15px;
+        .header__dynamic-area {
+          gap: 10%;
+          .dynamic-area__money {
+            .money__image {
+            }
+            .money__amount {
+              font-size: 28px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 40px;
+            }
+          }
         }
       }
+  
+      .level-two__map {
+        width: 45%;
+        top: 10%;
+        left: 25%;
+  
+        .map__counter {
+          font-size: 70px;
+          top: 190px;
+        }
+      }
 
-      .Blueberry {
-        left: 87%;
-        top: 20vh;
-        width: 5vh;
+      .Pavement {
+        left: 80%;
+        top: 18vh;
       }
-      .Banana {
-        left: 81%;
-        top: 33vh;
-        width: 9vh;
+      .Pavement2 {
+        left: 75%;
+        top: 27vh;
       }
-      .Coconut {
+      .Bridge {
         left: 68%;
         top: 36vh;
-        width: 8vh;
       }
-      .Watermelon {
-        left: 50%;
-        top: 37.5vh;
-        width: 8vh;
+      .Bridge2 {
+        left: 47%;
+        top: 40vh;
       }
-      .Cherry {
-        left: 35%;
-        top: 33vh;
-        width: 5vh;
+      .Equipment {
+        left: 27%;
+        top: 40vh;
       }
-      .Pineapple {
-        left: 20%;
-        top: 25vh;
-        width: 12vh;
+      .Fleet {
+        left: 10%;
+        top: 35vh;
       }
     }
   }
@@ -165,60 +168,71 @@
 
 @media screen and (max-width: 500px) {
   .landscape-deactive {
-    .level-one__container {
+    .level-two__container {
       height: 300px;
+      width: 100%;
 
-      .level-one__stall {
-        width: 35%;
-        top: 40px;
-        left: -5%;
-      }
-
-      .level-one__basket {
-        top: 130px;
-        left: 48%;
-
-        .basket__counter {
-          font-size: 20px;
-          top: 70%;
+      .header-area {
+        padding-top: 10px;
+        grid-template-columns: 50% 50%;
+        .header__dynamic-area {
+          justify-content: flex-end;
+          gap: 7%;
+          .dynamic-area__money {
+            margin-top: 10%;
+            gap: 10px;
+            .money__image {
+              width: 30px;
+            }
+            .money__amount {
+              font-size: 20px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 30px;
+            }
+          }
         }
-
-        .basket {
-          z-index: 2;
-          position: absolute;
-          opacity: 0.9;
+      }
+  
+      .level-two__map {
+        position: absolute;
+        width: 45%;
+        top: 15%;
+        left: 26%;
+        display: grid;
+        justify-content: center;
+  
+        .map__counter {
+          font-size: 30px;
+          top: 90px;
         }
       }
 
-      .Blueberry {
-        left: 87%;
-        top: 100px;
-        width: 8%;
+      .Pavement {
+        left: 73%;
+        top: 120px;
       }
-      .Banana {
-        left: 81%;
-        top: 170px;
-        width: 13%;
+      .Pavement2 {
+        left: 70%;
+        top: 180px;
       }
-      .Coconut {
-        left: 68%;
-        top: 210px;
-        width: 15%;
+      .Bridge {
+        left: 60%;
+        top: 230px;
       }
-      .Watermelon {
-        left: 54%;
+      .Bridge2 {
+        left: 33%;
         top: 240px;
-        width: 12%;
       }
-      .Cherry {
-        left: 40%;
+      .Equipment {
+        left: 10%;
         top: 222px;
-        width: 8%;
       }
-      .Pineapple {
-        left: 25%;
-        top: 200px;
-        width: 14%;
+      .Fleet {
+        left: 2%;
+        top: 170px;
       }
     }
   }
@@ -231,7 +245,7 @@
     align-content: center;
     height: 100vh;
 
-    .level-one__container {
+    .level-two__container {
       width: 100vw;
       height: 100vh;
       overflow: hidden !important;
@@ -244,73 +258,61 @@
       grid-template-rows: 1fr 2fr 1fr;
       position: relative;
 
-      .level-one__stall {
-        position: absolute;
-        width: 30%;
-        top: 50px;
-        z-index: 1;
-      }
+      
 
-      .level-one__basket {
-        position: absolute;
-        width: 16%;
-        top: 37%;
-        left: 50%;
-        display: grid;
-        justify-content: center;
-
-        .basket__counter {
-          z-index: 3;
-          font-size: 50px;
-          top: 30px;
-          position: relative;
-          color: aliceblue;
-        }
-
-        .basket {
-          z-index: 2;
-          position: absolute;
-          opacity: 1;
+      .header-area {
+        padding-top: 15px;
+        .header__dynamic-area {
+          gap: 10%;
+          .dynamic-area__money {
+            .money__image {
+            }
+            .money__amount {
+              font-size: 28px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 40px;
+            }
+          }
         }
       }
-
-      .Blueberry {
-        left: 87%;
-        top: 25%;
-        width: 8%;
-      }
-      .Banana {
-        left: 81%;
-        top: 50%;
-        width: 13%;
-      }
-      .Coconut {
-        left: 70%;
-        top: 71%;
-        width: 13%;
-      }
-      .Watermelon {
-        left: 54%;
-        top: 76.5%;
-        width: 12%;
-      }
-      .Cherry {
-        left: 40%;
-        top: 73%;
-        width: 8%;
-      }
-      .Pineapple {
+  
+      .level-two__map {
+        width: 45%;
+        top: 10%;
         left: 25%;
-        top: 60%;
-        width: 14%;
-        justify-content: start !important;
+  
+        .map__counter {
+          font-size: 70px;
+          top: 190px;
+        }
+      }
 
-        .fruit__calories {
-          margin-right: 40%;
-        }
-        .fruit__price {
-          margin-right: 40%;
-        }
+      .Pavement {
+        left: 80%;
+        top: 18vh;
+      }
+      .Pavement2 {
+        left: 75%;
+        top: 27vh;
+      }
+      .Bridge {
+        left: 68%;
+        top: 36vh;
+      }
+      .Bridge2 {
+        left: 47%;
+        top: 40vh;
+      }
+      .Equipment {
+        left: 27%;
+        top: 40vh;
+      }
+      .Fleet {
+        left: 10%;
+        top: 35vh;
       }
     }
   }

@@ -14,7 +14,7 @@ const Fruit = ({ image, cal, price, classs, alt, id, index }) => {
     <div
       id={id}
       className={`level-one__fruit ${classs}`}
-      style={{ opacity: isDragging ? "0" : "" }}
+      style={{ opacity: isDragging ? "0.5" : "1" }}
       ref={drag}
     >
       <img src={image} alt={alt} />

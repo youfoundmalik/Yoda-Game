@@ -108,60 +108,62 @@
 
 @media screen and (max-width: 1000px) and (max-height: 500px) {
   .landscape-active {
-    .level-one__container {
+    .level-two__container {
       height: 300px;
 
-      .level-one__stall {
-        width: 35%;
-        top: 40px;
-        left: -5%;
-      }
-
-      .level-one__basket {
-        top: 130px;
-        left: 48%;
-
-        .basket__counter {
-          font-size: 20px;
-          top: 70%;
-        }
-
-        .basket {
-          z-index: 2;
-          position: absolute;
-          opacity: 0.9;
+      .header-area {
+        padding-top: 15px;
+        .header__dynamic-area {
+          gap: 10%;
+          .dynamic-area__money {
+            .money__image {
+            }
+            .money__amount {
+              font-size: 28px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 40px;
+            }
+          }
         }
       }
-
-      .Blueberry {
-        left: 87%;
-        top: 100px;
-        width: 8%;
-      }
-      .Banana {
-        left: 81%;
-        top: 170px;
-        width: 13%;
-      }
-      .Coconut {
-        left: 68%;
-        top: 210px;
-        width: 15%;
-      }
-      .Watermelon {
-        left: 54%;
-        top: 240px;
-        width: 12%;
-      }
-      .Cherry {
-        left: 40%;
-        top: 222px;
-        width: 8%;
-      }
-      .Pineapple {
+  
+      .level-two__map {
+        width: 45%;
+        top: 10%;
         left: 25%;
-        top: 200px;
-        width: 14%;
+  
+        .map__counter {
+          font-size: 70px;
+          top: 190px;
+        }
+      }
+
+      .Pavement {
+        left: 80%;
+        top: 18vh;
+      }
+      .Pavement2 {
+        left: 75%;
+        top: 27vh;
+      }
+      .Bridge {
+        left: 68%;
+        top: 36vh;
+      }
+      .Bridge2 {
+        left: 47%;
+        top: 40vh;
+      }
+      .Equipment {
+        left: 27%;
+        top: 40vh;
+      }
+      .Fleet {
+        left: 10%;
+        top: 35vh;
       }
     }
   }

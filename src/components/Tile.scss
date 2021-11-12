@@ -60,7 +60,7 @@
 @media screen and (max-width: 1000px) and (max-height: 500px) {
   .level-two__tile {
     position: absolute;
-    width: 8% !important;
+    // width: 8% !important;
     .tile__percentage {
       font-size: 14px !important;
     }
@@ -77,6 +77,9 @@
 
 @media screen and (max-width: 1000px) {
   .level-two__tile {
+    .level-two__tile_img {
+    width: 80px;
+  }
     .tile__percentage {
       font-size: 24px;
     }
@@ -98,18 +101,16 @@
 
 @media screen and (max-width: 600px) {
   .level-two__tile {
+    .level-two__tile_img {
+      width: 50px;
+    }
     position: absolute;
-    width: 8% !important;
     .tile__percentage {
-      font-size: 14px;
+      font-size: 14px !important;
     }
 
     .tile__price {
-      font-size: 12px;
+      font-size: 15px !important;
     }
-  }
-
-  .tile-in-basket {
-    width: 0%;
   }
 }
