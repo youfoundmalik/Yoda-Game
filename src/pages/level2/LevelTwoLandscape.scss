@@ -21,7 +21,7 @@
     .header-area {
       padding-top: 15px;
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 55% 45%;
       .header__dynamic-area {
         display: grid;
         justify-content: flex-start;
@@ -36,11 +36,11 @@
           align-items: center;
           .money__image {
             margin-top: -5px;
-            width: 40px;
+            width: 30px;
             padding-top: 10px;
           }
           .money__amount {
-            font-size: 30px;
+            font-size: 20px;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -50,7 +50,7 @@
           display: flex;
           justify-content: flex-start;
           .bar__guage {
-            width: 50px;
+            width: 30px;
           }
         }
       }

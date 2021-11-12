@@ -110,10 +110,6 @@ const LevelTwo = () => {
       return;
     }
 
-    // setOnBridge((onBridge) => {
-    //   return [...onBridge, { ...draggedTile }];
-    // });
-
     setTilesList((tileList) => {
       return tileList.filter((tile) => id !== tile.id);
     });
@@ -132,7 +128,6 @@ const LevelTwo = () => {
   };
 
   const resetGame = () => {
-    // setOnBridge([]);
 
     setCash(25000);
 
@@ -174,15 +169,11 @@ const LevelTwo = () => {
             <NextLevelCard
               rotate={!landscape ? "" : "90deg"}
               guagefill={
-                percentage >= 32
+                percentage >= 49
                   ? guage100
-                  : percentage >= 24
+                  : percentage >= 25
                   ? guage75
-                  : percentage >= 16
-                  ? guage50
-                  : percentage >= 8
-                  ? guage25
-                  : guage0
+                  :  guage50
               }
               level="Level 2"
               backimg={background}
@@ -207,15 +198,11 @@ const LevelTwo = () => {
                 <div className="bar__guage">
                   <img
                     src={
-                      percentage >= 32
-                        ? guage100
-                        : percentage >= 24
-                        ? guage75
-                        : percentage >= 16
-                        ? guage50
-                        : percentage >= 8
-                        ? guage25
-                        : guage0
+                      percentage >= 49
+                  ? guage100
+                  : percentage >= 25
+                  ? guage75
+                  :  guage50
                     }
                     alt="guage"
                   />
