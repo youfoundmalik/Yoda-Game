@@ -112,59 +112,130 @@
       height: 300px;
 
       .header-area {
-        padding-top: 15px;
+        padding-top: 10px;
+        grid-template-columns: 50% 50%;
         .header__dynamic-area {
-          gap: 10%;
+          justify-content: flex-end;
+          gap: 7%;
           .dynamic-area__money {
+            margin-top: 10%;
+            gap: 10px;
             .money__image {
+              width: 30px;
             }
             .money__amount {
-              font-size: 28px;
+              font-size: 20px;
             }
           }
           .dynamic-area__bar {
             .bar__guage {
-              width: 40px;
+              width: 30px;
             }
           }
         }
       }
   
       .level-two__map {
+        position: absolute;
         width: 45%;
-        top: 10%;
-        left: 25%;
+        top: 15%;
+        left: 26%;
+        display: grid;
+        justify-content: center;
   
         .map__counter {
-          font-size: 70px;
-          top: 190px;
+          font-size: 30px;
+          top: 90px;
         }
       }
 
       .Pavement {
-        left: 80%;
-        top: 18vh;
+        left: 73%;
+        top: 120px;
       }
       .Pavement2 {
-        left: 75%;
-        top: 27vh;
+        left: 70%;
+        top: 180px;
       }
       .Bridge {
-        left: 68%;
-        top: 36vh;
+        left: 60%;
+        top: 230px;
       }
       .Bridge2 {
-        left: 47%;
-        top: 40vh;
+        left: 33%;
+        top: 240px;
       }
       .Equipment {
-        left: 27%;
-        top: 40vh;
+        left: 10%;
+        top: 222px;
       }
       .Fleet {
-        left: 10%;
-        top: 35vh;
+        left: 2%;
+        top: 170px;
       }
     }
   }
 }
+
+// @media screen and (max-width: 1000px) and (max-height: 500px) {
+//   .landscape-active {
+//     .level-two__container {
+//       height: 300px;
+
+//       .header-area {
+//         padding-top: 15px;
+//         .header__dynamic-area {
+//           gap: 10%;
+//           .dynamic-area__money {
+//             .money__image {
+//             }
+//             .money__amount {
+//               font-size: 28px;
+//             }
+//           }
+//           .dynamic-area__bar {
+//             .bar__guage {
+//               width: 40px;
+//             }
+//           }
+//         }
+//       }
+  
+//       .level-two__map {
+//         width: 45%;
+//         top: 10%;
+//         left: 25%;
+  
+//         .map__counter {
+//           font-size: 70px;
+//           top: 190px;
+//         }
+//       }
+
+//       .Pavement {
+//         left: 80%;
+//         top: 18vh;
+//       }
+//       .Pavement2 {
+//         left: 75%;
+//         top: 27vh;
+//       }
+//       .Bridge {
+//         left: 68%;
+//         top: 36vh;
+//       }
+//       .Bridge2 {
+//         left: 47%;
+//         top: 40vh;
+//       }
+//       .Equipment {
+//         left: 27%;
+//         top: 40vh;
+//       }
+//       .Fleet {
+//         left: 10%;
+//         top: 35vh;
+//       }
+//     }
+//   }
+// }

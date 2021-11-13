@@ -60,7 +60,9 @@
 @media screen and (max-width: 1000px) and (max-height: 500px) {
   .level-two__tile {
     position: absolute;
-    // width: 8% !important;
+    .level-two__tile_img {
+      width: 50px !important;
+    }
     .tile__percentage {
       font-size: 14px !important;
     }
