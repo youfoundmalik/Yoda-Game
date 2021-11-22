@@ -167,7 +167,7 @@ const LevelTwo = () => {
         {cash < tmp &&
           ReactDOM.createPortal(
             <NextLevelCard
-              rotate={!landscape ? "" : "90deg"}
+              rotate={!landscape ? "" : "-90deg"}
               guagefill={
                 percentage >= 49
                   ? guage100

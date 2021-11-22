@@ -1,4 +1,5 @@
 .footer-area {
+  flex-basis: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-end;
@@ -35,6 +36,10 @@
       width: 25px;
       cursor: pointer;
     }
+    .footer__fullscreenoff {
+      width: 25px;
+      cursor: pointer;
+    }
     .footer__fullscreen {
       display: none;
       width: 25px;
@@ -62,6 +67,9 @@
       .footer__sound {
         width: 15px !important;
         cursor: pointer;
+      }
+      .footer__fullscreenoff{
+        display: none;
       }
       .footer__fullscreen {
         display: block;
@@ -95,7 +103,7 @@
         width: 25px;
         cursor: pointer;
       }
-      .footer__fullscreen {
+      .footer__fullscreen,.footer__fullscreenoff {
         width: 25px;
         cursor: pointer;
       }
@@ -122,6 +130,9 @@
       .footer__sound {
         width: 15px;
         cursor: pointer;
+      }
+      .footer__fullscreenoff{
+        display: none;
       }
       .footer__fullscreen {
         display: block;

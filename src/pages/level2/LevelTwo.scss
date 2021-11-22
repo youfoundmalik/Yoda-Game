@@ -99,7 +99,43 @@
     }
   }
 }
+@media screen and (max-height: 600px){
+  .landscape-deactive {
+    .level-two__container {
+      height: 100vh;
 
+      .header-area {
+        .header__dynamic-area {
+          gap: 5%;
+          .dynamic-area__money {
+            .money__amount {
+              font-size: 28px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 40px;
+            }
+          }
+        }
+      }
+  
+      .level-two__map {
+        width: 400px;
+        top: 10%;
+        left: 25%;
+  
+        .map__counter {
+          font-size: 70px;
+          top: 190px;
+        }
+      }
+      .level-two__tile_img{
+        width: 70px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1000px) {
   .landscape-deactive {
     .level-two__container {

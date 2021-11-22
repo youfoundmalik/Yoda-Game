@@ -23,6 +23,9 @@ const Footer = ({ reset,flip }) => {
         <div className="footer__fullscreen">
           <img src={fullscreen} alt="Fullscreen" onClick={flip}/>
         </div>
+        <div className="footer__fullscreenoff">
+          <img src={fullscreen} alt="Fullscreen"/>
+        </div>
       </div>
     </div>
   );

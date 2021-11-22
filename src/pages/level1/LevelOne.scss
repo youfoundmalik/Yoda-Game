@@ -3,7 +3,6 @@
   align-items: flex-start;
   .level-one__container {
     display: grid;
-    // padding-bottom: 1rem;
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -85,7 +84,67 @@
   }
 }
 
-
+@media screen and (max-height: 600px){
+  .landscape-deactive{
+    .level-one__container {
+      height: 100vh;
+      background-color: #e3e8fe;
+      background-image: url("../../images/Lvl1/Yoda_Background.png");
+      background-size: cover;
+  
+      .level-one__stall {
+        width: 30%;
+      }
+  
+      .level-one__basket {
+        top: 42%;
+        left: 45%;
+  
+        .basket__counter {
+          // position: relative;
+          // font-size: 35px;
+          top: -70px;
+        }
+  
+        .basket {
+          position: relative;
+          bottom: 0px;
+        }
+      }
+  
+      .Blueberry {
+        left: 87%;
+        top: 30%;
+        width: 6%;
+      }
+      .Banana {
+        left: 81%;
+        top: 53%;
+        width: 9%;
+      }
+      .Coconut {
+        left: 68%;
+        top: 70%;
+        width: 8%;
+      }
+      .Watermelon {
+        left: 50%;
+        top: 75%;
+        width: 8%;
+      }
+      .Cherry {
+        left: 35%;
+        top: 63%;
+        width: 6%;
+      }
+      .Pineapple {
+        left: 20%;
+        top: 50%;
+        width: 10%;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1000px) {
   .landscape-deactive{
     .level-one__container {

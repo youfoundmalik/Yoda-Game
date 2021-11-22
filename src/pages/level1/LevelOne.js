@@ -173,7 +173,7 @@ const LevelOne = () => {
         {cash < tmp &&
           ReactDOM.createPortal(
             <NextLevelCard
-              rotate={!landscape ? "" : "90deg"}
+              rotate={!landscape ? "" : "-90deg"}
               guagefill={
                 calories >= 32
                   ? guage100
