@@ -5,9 +5,9 @@ import { useDrop } from "react-dnd";
 import "./LevelTwo.scss";
 import "./LevelTwoLandscape.scss";
 
-import Tile from "../../components/Tile";
-import Footer from "../../components/Footer";
-import NextLevelCard from "../../components/NextLevelCard";
+import Tile from "../../components/level2/Tile";
+import Footer from "../../components/common/Footer";
+import NextLevelCard from "../../components/common/NextLevelCard";
 
 import map from "../../images/Lvl2/Map.png";
 import Pavement from "../../images/Lvl2/Yoda_Icon-Pavement.png";
@@ -18,8 +18,6 @@ import Equipment from "../../images/Lvl2/Yoda_Icon-Equipment.png";
 import Fleet from "../../images/Lvl2/Yoda_Icon-Fleet.png";
 import background from "../../images/Lvl2/Yoda_Background.png";
 
-import guage0 from "../../images/Yoda_Gauge-0.png";
-import guage25 from "../../images/Yoda_Gauge-25.png";
 import guage50 from "../../images/Yoda_Gauge-50.png";
 import guage75 from "../../images/Yoda_Gauge-75.png";
 import guage100 from "../../images/Yoda_Gauge-100.png";

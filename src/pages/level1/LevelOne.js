@@ -4,10 +4,10 @@ import { useDrop } from "react-dnd";
 import "./LevelOne.scss";
 import "./LevelOneLandscape.scss";
 
-import Header from "../../components/Header";
-import Fruit from "../../components/Fruit";
-import Footer from "../../components/Footer";
-import NextLevelCard from "../../components/NextLevelCard";
+import Header from "../../components/common/Header";
+import Fruit from "../../components/level1/Fruit";
+import Footer from "../../components/common/Footer";
+import NextLevelCard from "../../components/common/NextLevelCard";
 
 import stall from "../../images/Lvl1/Yoda_Stall.png";
 import basket from "../../images/Lvl1/Basket.png";
@@ -87,7 +87,6 @@ const LevelOne = () => {
   const [landscape, setLandscape] = useState(false);
   const [fruitList, setFruitsList] = useState(fruits);
 
-  // const [inBasket, setInBasket] = useState([]);
   const [counter, setCounter] = useState(0);
   const [cash, setCash] = useState(25);
   const [calories, setCalories] = useState(0);

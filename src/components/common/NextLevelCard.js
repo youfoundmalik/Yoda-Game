@@ -1,8 +1,8 @@
 import React from "react";
 import "./NextLevel.scss";
 
-import nextlevel from "../images/Yoda_Next-Level.png";
-import retry from "../images/sysIcon/Dark_Retry.png";
+import nextlevel from "../../images/Yoda_Next-Level.png";
+import retry from "../../images/sysIcon/Dark_Retry.png";
 import { Link } from "react-router-dom";
 
 const NextLevelCard = ({ level, guagefill, backimg, retryclicked, rotate, path }) => {

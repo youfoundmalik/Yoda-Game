@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.scss";
 
-import retry from "../images/sysIcon/Dark_Retry.png";
-import sound from "../images/sysIcon/Dark_SoundOff.png";
-import fullscreen from "../images/sysIcon/Dark_Fullscreen.png";
+import retry from "../../images/sysIcon/Dark_Retry.png";
+import sound from "../../images/sysIcon/Dark_SoundOff.png";
+import fullscreen from "../../images/sysIcon/Dark_Fullscreen.png";
 
 const Footer = ({ reset,flip }) => {
   return (

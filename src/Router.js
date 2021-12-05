@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import LevelOne from "./pages/level1/LevelOne";
 import LevelTwo from "./pages/level2/LevelTwo";
+import LevelThree from "./pages/level3/LevelThree";
 
 const Router = () => {
   return (
@@ -12,6 +13,9 @@ const Router = () => {
         </Route>
         <Route path="/level2" exact>
           <LevelTwo />
+        </Route>
+        <Route path="/level3" exact>
+          <LevelThree />
         </Route>
         <Route path="*">
           <Redirect to="/level1" />

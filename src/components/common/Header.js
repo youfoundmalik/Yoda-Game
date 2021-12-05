@@ -1,8 +1,8 @@
 import React from "react";
 import "./Header.scss";
 
-import tagline from "../images/Tagline.png";
-import money from "../images/Yoda_Budget.png";
+import tagline from "../../images/Tagline.png";
+import money from "../../images/Yoda_Budget.png";
 
 const Header = ({ amount, guage }) => {
   return (

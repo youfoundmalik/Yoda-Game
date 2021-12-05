@@ -89,7 +89,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) and (max-height: 500px){
+@media (max-width: 1050px) and (max-height: 500px){
   .landscape-active{
     .level-one__container {
       height: 300px;
@@ -145,6 +145,30 @@
         left: 25%;
         top: 200px;
         width: 14%;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px){
+  .landscape-active {
+  
+    .level-one__container {
+  
+      .level-one__stall {
+        position: absolute;
+        width: 40% !important;
+        top: 15% !important;
+        z-index: 1;
+      }
+
+      .level-one__basket {
+        width: 20%;
+  
+        .basket__counter {
+          font-size: 50px;
+          top: 70px;
+        }
       }
     }
   }

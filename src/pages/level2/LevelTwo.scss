@@ -4,6 +4,7 @@
   .level-two__container {
     display: grid;
     position: relative;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-color: #e3e8fe;
@@ -136,7 +137,7 @@
     }
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   .landscape-deactive {
     .level-two__container {
       height: 50vh;
@@ -164,7 +165,7 @@
       }
   
       .level-two__map {
-        width: 45%;
+        width: 350px;
         top: 10%;
         left: 25%;
   
@@ -234,7 +235,7 @@
   
       .level-two__map {
         position: absolute;
-        width: 45%;
+        width: 180px;
         top: 15%;
         left: 26%;
         display: grid;
@@ -274,7 +275,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) and (max-height: 500px) {
+@media screen and (max-width: 1050px) and (max-height: 500px) {
   .landscape-deactive {
     display: grid;
     justify-content: center;
