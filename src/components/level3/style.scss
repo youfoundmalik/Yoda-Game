@@ -1,4 +1,4 @@
-.level-two__tile {
+.level-three__tile {
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -7,7 +7,7 @@
   position: absolute;
   align-items: center;
   z-index: 99;
-  gap: 0px;
+  gap: 5px;
   cursor: pointer;
 
   animation-name: pulse;
@@ -15,25 +15,25 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 
-  .level-two__tile_img {
-    width: 100px;
+  .level-three__tile_img {
+    width: 40px;
   }
 
-  .level-two__tile_text {
+  .level-three__tile_text {
     display: grid;
     justify-content: center;
     .tile__percentage {
       display: flex;
       gap: 5px;
-      justify-self: center;
+      justify-self: flex-start;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 14px;
     }
 
     .tile__price {
       display: flex;
       justify-self: center;
-      font-size: 20px;
+      font-size: 14px;
       opacity: 0.5;
     }
   }

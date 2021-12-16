@@ -13,12 +13,12 @@ export const Bridge1Tile = ({ image, percent, price, classs, alt, id, index }) =
   return (
     <div
       id={id}
-      className={`level-two__tile ${classs}`}
+      className={`level-three__tile ${classs}`}
       style={{ opacity: isDragging ? "0" : "" }}
       ref={drag}
     >
-      <div className="level-two__tile_img"><img src={image} alt={alt} /></div>
-      <div className="level-two__tile_text">
+      <div className="level-three__tile_img"><img src={image} alt={alt} /></div>
+      <div className="level-three__tile_text">
         <div className="tile__percentage">
           <span className="percentage__number">{percent}</span>
           <span className="percentage__text">%</span>
@@ -43,12 +43,12 @@ export const Bridge2Tile = ({ image, percent, price, classs, alt, id, index }) =
   return (
     <div
       id={id}
-      className={`level-two__tile ${classs}`}
+      className={`level-three__tile ${classs}`}
       style={{ opacity: isDragging ? "0" : "" }}
       ref={drag}
     >
-      <div className="level-two__tile_img"><img src={image} alt={alt} /></div>
-      <div className="level-two__tile_text">
+      <div className="level-three__tile_img"><img src={image} alt={alt} /></div>
+      <div className="level-three__tile_text">
         <div className="tile__percentage">
           <span className="percentage__number">{percent}</span>
           <span className="percentage__text">%</span>
@@ -73,12 +73,12 @@ export const Road1Tile = ({ image, percent, price, classs, alt, id, index }) => 
   return (
     <div
       id={id}
-      className={`level-two__tile ${classs}`}
+      className={`level-three__tile ${classs}`}
       style={{ opacity: isDragging ? "0" : "" }}
       ref={drag}
     >
-      <div className="level-two__tile_img"><img src={image} alt={alt} /></div>
-      <div className="level-two__tile_text">
+      <div className="level-three__tile_img"><img src={image} alt={alt} /></div>
+      <div className="level-three__tile_text">
         <div className="tile__percentage">
           <span className="percentage__number">{percent}</span>
           <span className="percentage__text">%</span>
@@ -103,12 +103,12 @@ export const Road2Tile = ({ image, percent, price, classs, alt, id, index }) => 
   return (
     <div
       id={id}
-      className={`level-two__tile ${classs}`}
+      className={`level-three__tile ${classs}`}
       style={{ opacity: isDragging ? "0" : "" }}
       ref={drag}
     >
-      <div className="level-two__tile_img"><img src={image} alt={alt} /></div>
-      <div className="level-two__tile_text">
+      <div className="level-three__tile_img"><img src={image} alt={alt} /></div>
+      <div className="level-three__tile_text">
         <div className="tile__percentage">
           <span className="percentage__number">{percent}</span>
           <span className="percentage__text">%</span>
@@ -133,12 +133,12 @@ export const Road3Tile = ({ image, percent, price, classs, alt, id, index }) => 
   return (
     <div
       id={id}
-      className={`level-two__tile ${classs}`}
+      className={`level-three__tile ${classs}`}
       style={{ opacity: isDragging ? "0" : "" }}
       ref={drag}
     >
-      <div className="level-two__tile_img"><img src={image} alt={alt} /></div>
-      <div className="level-two__tile_text">
+      <div className="level-three__tile_img"><img src={image} alt={alt} /></div>
+      <div className="level-three__tile_text">
         <div className="tile__percentage">
           <span className="percentage__number">{percent}</span>
           <span className="percentage__text">%</span>
