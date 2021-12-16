@@ -712,10 +712,216 @@
   }
 }
 
+// desktop screen****************/
+@media (min-width: 65em) {
+  .landscape-deactive {
+    align-items: flex-start;
+    .level-three__container {
+      width: 100vw;
+      height: 100vh;
+
+      .header-area {
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .dynamic-area__money {
+          gap: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          .money__image {
+            margin-top: -5px;
+            width: 40px;
+            padding-top: 10px;
+          }
+          .money__amount {
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+          }
+        }
+        .dynamic-area__bar {
+          display: flex;
+          justify-content: center;
+          height: 60px;
+          .bar__guage {
+            transform: rotate(-90deg);
+            width: 60px;
+          }
+        }
+      }
+
+      .level-three__map {
+        position: absolute;
+        width: 20%;
+        justify-content: center;
+        .map_items {
+          position: relative;
+          .map {
+            z-index: 2;
+            opacity: 1;
+          }
+          .level-three__tile {
+            gap: 0px;
+            .level-three__tile_img {
+              width: 100px;
+            }
+
+            .level-three__tile_text {
+              justify-content: center;
+              .tile__percentage {
+                gap: 5px;
+                font-size: 24px;
+              }
+
+              .tile__price {
+                justify-self: center;
+                font-size: 20px;
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+      .bridge1 {
+        .level-three__tile {
+          .level-three__tile_img {
+            order: 2;
+          }
+          .level-three__tile_text {
+            order: 1;
+            .tile__percentage {
+              justify-self: flex-end;
+            }
+          }
+        }
+        top: 20%;
+        left: 20%;
+        .yellow_tile {
+          top: 20%;
+          right: auto;
+          left: -50%;
+        }
+        .green_tile {
+          top: 50%;
+          right: auto;
+          left: -70%;
+        }
+      }
+      .bridge2 {
+        .level-three__tile {
+          .level-three__tile_img {
+            order: 1;
+          }
+          .level-three__tile_text {
+            order: 2;
+            .tile__percentage {
+              justify-self: flex-start;
+            }
+          }
+        }
+        top: 18%;
+        left: auto;
+        right: 15%;
+        .yellow_tile {
+          top: 0%;
+          left: auto;
+          right: -45%;
+        }
+        .green_tile {
+          top: 40%;
+          left: auto;
+          right: -60%;
+        }
+      }
+      .road1 {
+        .map_items {
+          display: grid;
+        }
+        .level-three__tile {
+          display: grid;
+          .level-three__tile_img {
+            order: 2;
+          }
+          .level-three__tile_text {
+            order: 1;
+            .tile__percentage {
+              justify-self: center;
+            }
+          }
+        }
+        top: 15%;
+        left: 43%;
+        .yellow_tile {
+          top: -30%;
+          right: auto;
+          left: 17%;
+        }
+        .green_tile {
+          top: -30%;
+          right: auto;
+          left: 53%;
+        }
+      }
+      .road2 {
+        .level-three__tile {
+          .level-three__tile_img {
+            order: 2;
+          }
+          .level-three__tile_text {
+            order: 1;
+            .tile__percentage {
+              justify-self: flex-end;
+            }
+          }
+        }
+        top: 60%;
+        left: 30%;
+        .yellow_tile {
+          top: 40%;
+          right: auto;
+          left: -60%;
+        }
+        .green_tile {
+          top: 80%;
+          right: auto;
+          left: -30%;
+        }
+      }
+      .road3 {
+        .level-three__tile {
+          .level-three__tile_img {
+            order: 1;
+          }
+          .level-three__tile_text {
+            order: 2;
+            .tile__percentage {
+              justify-self: flex-start;
+            }
+          }
+        }
+        top: 55%;
+        left: auto;
+        right: 18%;
+        .yellow_tile {
+          top: 40%;
+          left: auto;
+          right: -60%;
+        }
+        .green_tile {
+          top: 75%;
+          left: auto;
+          right: -40%;
+        }
+      }
+    }
+  }
+}
+
 //landscape mode*************/
 
 // mobile screens **********/
-@media (max-height: 480px) {
+@media (max-height: 600px) {
   .landscape-deactive {
     justify-content: center;
     align-content: center;
@@ -915,7 +1121,7 @@
   }
 }
 
-@media (max-height: 480px) {
+@media (max-height: 600px) {
   .landscape-active {
     // justify-content: flex-start;
     .level-three__container {
@@ -1052,7 +1258,7 @@
 }
 
 // tablet ************/
-@media (max-height: 1025px) {
+@media (max-height: 48em)  {
   .landscape-deactive {
     justify-content: center;
     align-content: center;
@@ -1232,7 +1438,7 @@
   }
 }
 
-@media (max-height: 1025px) {
+@media (max-height: 48em) {
   .landscape-active {
     .level-three__container {
       height: 50vw;
@@ -1413,212 +1619,6 @@
           top: 30%;
           left: auto;
           right: -70%;
-        }
-        .green_tile {
-          top: 75%;
-          left: auto;
-          right: -40%;
-        }
-      }
-    }
-  }
-}
-
-// desktop screen****************/
-@media (min-width: 65em) {
-  .landscape-deactive {
-    align-items: flex-start;
-    .level-three__container {
-      width: 100vw;
-      height: 100vh;
-
-      .header-area {
-        padding-top: 30px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        .dynamic-area__money {
-          gap: 10px;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          .money__image {
-            margin-top: -5px;
-            width: 40px;
-            padding-top: 10px;
-          }
-          .money__amount {
-            font-size: 35px;
-            display: flex;
-            align-items: center;
-          }
-        }
-        .dynamic-area__bar {
-          display: flex;
-          justify-content: center;
-          height: 60px;
-          .bar__guage {
-            transform: rotate(-90deg);
-            width: 60px;
-          }
-        }
-      }
-
-      .level-three__map {
-        position: absolute;
-        width: 20%;
-        justify-content: center;
-        .map_items {
-          position: relative;
-          .map {
-            z-index: 2;
-            opacity: 1;
-          }
-          .level-three__tile {
-            gap: 0px;
-            .level-three__tile_img {
-              width: 100px;
-            }
-
-            .level-three__tile_text {
-              justify-content: center;
-              .tile__percentage {
-                gap: 5px;
-                font-size: 24px;
-              }
-
-              .tile__price {
-                justify-self: center;
-                font-size: 20px;
-                opacity: 0.5;
-              }
-            }
-          }
-        }
-      }
-      .bridge1 {
-        .level-three__tile {
-          .level-three__tile_img {
-            order: 2;
-          }
-          .level-three__tile_text {
-            order: 1;
-            .tile__percentage {
-              justify-self: flex-end;
-            }
-          }
-        }
-        top: 20%;
-        left: 20%;
-        .yellow_tile {
-          top: 20%;
-          right: auto;
-          left: -50%;
-        }
-        .green_tile {
-          top: 50%;
-          right: auto;
-          left: -70%;
-        }
-      }
-      .bridge2 {
-        .level-three__tile {
-          .level-three__tile_img {
-            order: 1;
-          }
-          .level-three__tile_text {
-            order: 2;
-            .tile__percentage {
-              justify-self: flex-start;
-            }
-          }
-        }
-        top: 18%;
-        left: auto;
-        right: 15%;
-        .yellow_tile {
-          top: 0%;
-          left: auto;
-          right: -45%;
-        }
-        .green_tile {
-          top: 40%;
-          left: auto;
-          right: -60%;
-        }
-      }
-      .road1 {
-        .map_items {
-          display: grid;
-        }
-        .level-three__tile {
-          display: grid;
-          .level-three__tile_img {
-            order: 2;
-          }
-          .level-three__tile_text {
-            order: 1;
-            .tile__percentage {
-              justify-self: center;
-            }
-          }
-        }
-        top: 15%;
-        left: 43%;
-        .yellow_tile {
-          top: -30%;
-          right: auto;
-          left: 17%;
-        }
-        .green_tile {
-          top: -30%;
-          right: auto;
-          left: 53%;
-        }
-      }
-      .road2 {
-        .level-three__tile {
-          .level-three__tile_img {
-            order: 2;
-          }
-          .level-three__tile_text {
-            order: 1;
-            .tile__percentage {
-              justify-self: flex-end;
-            }
-          }
-        }
-        top: 60%;
-        left: 30%;
-        .yellow_tile {
-          top: 40%;
-          right: auto;
-          left: -60%;
-        }
-        .green_tile {
-          top: 80%;
-          right: auto;
-          left: -30%;
-        }
-      }
-      .road3 {
-        .level-three__tile {
-          .level-three__tile_img {
-            order: 1;
-          }
-          .level-three__tile_text {
-            order: 2;
-            .tile__percentage {
-              justify-self: flex-start;
-            }
-          }
-        }
-        top: 55%;
-        left: auto;
-        right: 18%;
-        .yellow_tile {
-          top: 40%;
-          left: auto;
-          right: -60%;
         }
         .green_tile {
           top: 75%;
