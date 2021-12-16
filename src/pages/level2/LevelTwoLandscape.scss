@@ -58,16 +58,17 @@
 
     .level-two__map {
       position: absolute;
-      width: 45%;
-      top: 10%;
+      width: 50%;
+      top: 40%;
       left: 10%;
       display: grid;
+      align-items: center;
       justify-content: center;
 
       .map__counter {
         z-index: 3;
         font-size: 70px;
-        top: 190px;
+        top: auto;
         position: relative;
         color: aliceblue;
       }
@@ -137,7 +138,7 @@
   
       .level-two__map {
         position: absolute;
-        width: 45%;
+        width: 35% !important;
         top: 15%;
         left: 26%;
         display: grid;
@@ -177,3 +178,17 @@
   }
 }
 
+@media (max-width: 500px) {
+  .landscape-active {
+    .level-two__container {
+  
+      .level-two__map {
+        width: 35% !important;
+  
+        .map__counter {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}

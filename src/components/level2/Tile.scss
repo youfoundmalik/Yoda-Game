@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   .level-two__tile {
     .level-two__tile_img {
       width: 80px;
@@ -98,7 +98,7 @@
 @media screen and (max-width: 600px) {
   .level-two__tile {
     .level-two__tile_img {
-      width: 50px;
+      width: 50px !important;
     }
     position: absolute;
     .tile__percentage {
