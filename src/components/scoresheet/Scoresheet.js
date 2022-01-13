@@ -62,7 +62,7 @@ const Scoresheet = () => {
               <Slice
                 id={currentPlayer[0]?.id}
                 rank="="
-                player={currentPlayer[0]?.player?.slice(0, 24)}
+                player={window.screen.width > 450 ? currentPlayer[0]?.player?.slice(0, 24) : currentPlayer[0]?.player?.slice(0, 18)}
                 country={currentPlayer[0]?.country?.slice(0, 15)}
                 score={currentPlayer[0]?.score}
               />
@@ -81,7 +81,7 @@ const Scoresheet = () => {
                     key={id}
                     id={id}
                     rank={index + 1}
-                    player={player.slice(0, 24)}
+                    player={window.screen.width > 450 ? player.slice(0, 24) : player.slice(0, 12)+'...'}
                     country={country.slice(0, 15)}
                     score={score}
                   />

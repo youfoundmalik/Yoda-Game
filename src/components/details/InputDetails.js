@@ -9,7 +9,7 @@ import { scoresActions } from "../../store/scores";
 
 import AA from "../../images/AgileAssests.png";
 
-const InputDetails = ({ rotate }) => {
+const InputDetails = () => {
   const dispatch = useDispatch();
   const playerscore = useSelector((state) => state.scores.playerScore);
   const [subscribe, setSubscribe] = useState(false);
@@ -69,12 +69,7 @@ const InputDetails = ({ rotate }) => {
 
   return (
     <div className="overlay">
-      <div
-        className="details_container"
-        style={{
-          transform: `rotate(${rotate})`,
-        }}
-      >
+      <div className="details_container">
         <div className="details">
           <div className="heading">
             <h1>Save your score</h1>

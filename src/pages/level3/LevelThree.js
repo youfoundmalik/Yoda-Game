@@ -53,7 +53,6 @@ import guage75 from "../../images/Yoda_Gauge-75.png";
 import guage100 from "../../images/Yoda_Gauge-100.png";
 import money from "../../images/Yoda_Budget.png";
 
-
 const bridge1 = [
   {
     id: 1,
@@ -136,7 +135,7 @@ const road3 = [
 ];
 
 const LevelThree = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [landscape, setLandscape] = useState(false);
   const [gameOver, setGameOver] = useState(false);
 
@@ -239,7 +238,7 @@ const LevelThree = () => {
         return parseInt(percentage) + parseInt(draggedTile.percent);
       });
 
-      dispatch(scoresActions.calculateScore(draggedTile.percent))
+      dispatch(scoresActions.calculateScore(draggedTile.percent));
     }
   };
   const addTileToBridge2 = ({ id }) => {
@@ -265,7 +264,7 @@ const LevelThree = () => {
         return parseInt(percentage) + parseInt(draggedTile.percent);
       });
 
-      dispatch(scoresActions.calculateScore(draggedTile.percent))
+      dispatch(scoresActions.calculateScore(draggedTile.percent));
     }
   };
   const addTileToRoad1 = ({ id }) => {
@@ -291,7 +290,7 @@ const LevelThree = () => {
         return parseInt(percentage) + parseInt(draggedTile.percent);
       });
 
-      dispatch(scoresActions.calculateScore(draggedTile.percent))
+      dispatch(scoresActions.calculateScore(draggedTile.percent));
     }
   };
   const addTileToRoad2 = ({ id }) => {
@@ -317,7 +316,7 @@ const LevelThree = () => {
         return parseInt(percentage) + parseInt(draggedTile.percent);
       });
 
-      dispatch(scoresActions.calculateScore(draggedTile.percent))
+      dispatch(scoresActions.calculateScore(draggedTile.percent));
     }
   };
   const addTileToRoad3 = ({ id }) => {
@@ -343,7 +342,7 @@ const LevelThree = () => {
         return parseInt(percentage) + parseInt(draggedTile.percent);
       });
 
-      dispatch(scoresActions.calculateScore(draggedTile.percent))
+      dispatch(scoresActions.calculateScore(draggedTile.percent));
     }
   };
 
@@ -361,7 +360,7 @@ const LevelThree = () => {
   }, [bridgeOne, bridgeTwo, roadOne, roadTwo, roadThree]);
 
   const resetGame = () => {
-    dispatch(scoresActions.resetGame())
+    dispatch(scoresActions.resetGame());
     setCash(125000);
     setPercentage(0);
     setGameOver(false);
@@ -399,7 +398,7 @@ const LevelThree = () => {
       <div className={!landscape ? "landscape-deactive" : "landscape-active"}>
         {gameOver &&
           ReactDOM.createPortal(
-            <InputDetails rotate={!landscape ? "" : "-90deg"} />,
+            <InputDetails />,
             document.getElementById("overlay")
           )}
         <div className="level-three__container">
