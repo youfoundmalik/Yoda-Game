@@ -1,0 +1,109 @@
+.scoresheet_container {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../images/Lvl3/Background.png);
+  .scoresheet_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .scoresheet_content {
+    p {
+      margin: 0px;
+      text-transform: capitalize;
+    }
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    .scoresheet_table {
+      width: 700px;
+      min-height: 150px;
+      display: grid;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+      .table {
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr 1.5fr;
+        .title {
+          font-weight: bold;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          padding: 7px 2px;
+          font-size: 18px;
+          letter-spacing: 1;
+          color: rgba(255, 255, 255, 0.9);
+        }
+        .rightborder {
+          border-right: 1px solid;
+        }
+      }
+      .table_head {
+        background: navy;
+        border-radius: 20px 20px 0 0;
+        height: 50px;
+      }
+      .table_body1 {
+        display: grid;
+        .body_slice {
+          height: 40px;
+          .details {
+            border-color: #333;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 2px;
+            letter-spacing: 0.5;
+            color: #333;
+          }
+          &:nth-child(odd) {
+            background: rgba(135, 207, 235, 0.2);
+          }
+          &:first-child {
+            background: rgba(255, 68, 0, 0.2);
+            p{
+                color: orangered;
+            }
+          }
+        }
+      }
+      .table_body2 {
+        display: grid;
+        .body_slice {
+          height: 40px;
+          .details {
+            border-color: #333;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 2px;
+            letter-spacing: 0.5;
+            color: #333;
+          }
+          &:nth-child(even) {
+            background: rgba(135, 207, 235, 0.2);
+          }
+        }
+      }
+    }
+  }
+  .footer-area {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+}

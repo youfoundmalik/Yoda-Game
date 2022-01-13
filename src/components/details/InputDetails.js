@@ -1,12 +1,17 @@
 import React, { useState, useMemo } from "react";
 import "./InputDetails.scss";
+import { Link, Redirect } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import "react-country-dropdown/dist/index.css";
 import countryList from "react-select-country-list";
 import Select from "react-select";
+import { scoresActions } from "../../store/scores";
 
 import AA from "../../images/AgileAssests.png";
 
 const InputDetails = ({ rotate }) => {
+  const dispatch = useDispatch();
+  const playerscore = useSelector((state) => state.scores.playerScore);
   const [subscribe, setSubscribe] = useState(false);
   const [country, setCountry] = useState("");
   const [countryName, setCountryName] = useState("");
@@ -14,6 +19,7 @@ const InputDetails = ({ rotate }) => {
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [email, setEmail] = useState("");
+  const [showScore, setShowScore] = useState(false);
 
   const countryHandler = (e) => {
     setCountry(e);
@@ -32,19 +38,33 @@ const InputDetails = ({ rotate }) => {
   const toggleHandler = () => {
     setSubscribe(!subscribe);
   };
-  const submitFormHandler = (e) => {
+
+  //// action after form submit
+  const submitFormHandler = async (e) => {
     e.preventDefault();
 
+    /// compile player data
     const playerDetails = {
       id: Math.random(),
-      playerName: `${fName} ${lName}`,
-      playerEmail: email,
-      playerCountry: countryName,
+      player: `${fName} ${lName}`,
+      email: email,
+      country: countryName,
       signUp: subscribe,
-      playerScore: 12,
+      score: playerscore,
     };
+    /// send data to local storage
+    dispatch(scoresActions.getPlayerScore([playerDetails]));
 
-    console.log(playerDetails);
+    /// send data to database
+    fetch("https://yodagame-test-default-rtdb.firebaseio.com/highscores.json", {
+      method: "POST",
+      body: JSON.stringify(playerDetails),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    setShowScore(true);
   };
 
   return (
@@ -94,6 +114,7 @@ const InputDetails = ({ rotate }) => {
                 options={options}
                 value={country}
                 onChange={countryHandler}
+                required
               />
             </div>
             <div className="input_Section subscribe">
@@ -107,13 +128,13 @@ const InputDetails = ({ rotate }) => {
           </form>
           <p className="terms">
             By confirming, you agree to our{" "}
-            <a className="link" href="#">
+            <Link className="link" to="#">
               Terms and Conditions
-            </a>
+            </Link>
             . We do not share your information. See our{" "}
-            <a className="link" href="#">
+            <Link className="link" to="#">
               Privacy Policy
-            </a>
+            </Link>
             .
           </p>
         </div>
@@ -123,6 +144,7 @@ const InputDetails = ({ rotate }) => {
           </div>
         </div>
       </div>
+      {showScore && <Redirect to="/scoreboard" />}
     </div>
   );
 };
