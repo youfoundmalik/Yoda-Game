@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { useDrop } from "react-dnd";
 
 import Footer from "../../components/common/Footer";
-import NextLevelCard from "../../components/common/NextLevelCard";
+// import NextLevelCard from "../../components/common/NextLevelCard";
 import {
   Bridge1Tile,
   Bridge2Tile,
@@ -18,7 +18,7 @@ import {
 // import { Road2Tile } from "../../components/level3/Tiles";
 // import { Road3Tile } from "../../components/level3/Tiles";
 
-import background from "../../images/Lvl3/Background.png";
+// import background from "../../images/Lvl3/Background.png";
 
 import map1 from "../../images/Lvl3/Bridge1.png";
 import map1Y from "../../images/Lvl3/Bridge1-Yellow.png";
@@ -55,6 +55,7 @@ import guage50 from "../../images/Yoda_Gauge-50.png";
 import guage75 from "../../images/Yoda_Gauge-75.png";
 import guage100 from "../../images/Yoda_Gauge-100.png";
 import money from "../../images/Yoda_Budget.png";
+import InputDetails from "../../components/details/InputDetails";
 
 const bridge1 = [
   {
@@ -386,23 +387,10 @@ const LevelThree = () => {
       <div className={!landscape ? "landscape-deactive" : "landscape-active"}>
         {gameOver &&
           ReactDOM.createPortal(
-            <NextLevelCard
+            <InputDetails
               rotate={!landscape ? "" : "-90deg"}
-              guagefill={
-                percentage >= 80
-                  ? guage100
-                  : percentage >= 75
-                  ? guage75
-                  : percentage >= 50
-                  ? guage50
-                  : percentage >= 25
-                  ? guage25
-                  : guage0
-              }
-              level="Level 3"
-              backimg={background}
-              retryclicked={resetGame}
-              path="/level3"
+              // retryclicked={resetGame}
+              // path="/level3"
             />,
             document.getElementById("overlay")
           )}

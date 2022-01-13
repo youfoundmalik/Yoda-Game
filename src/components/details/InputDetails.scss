@@ -1,0 +1,156 @@
+.details_container {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  width: 700px;
+  border: 1px solid rgb(17, 228, 17);
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+
+  .details {
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    .heading {
+      h1 {
+        line-height: 20px;
+      }
+      hr {
+        width: 50%;
+        border-color: transparent;
+        border-bottom: 4px solid rgb(17, 228, 17);
+      }
+    }
+    .info {
+      border-top: 1px solid #333;
+      display: grid;
+      padding-top: 20px;
+      gap: 15px;
+
+      .input_Section {
+        display: grid;
+        gap: 5px;
+
+        label {
+          font-size: 11px;
+          font-weight: 300;
+          text-transform: capitalize;
+        }
+        input {
+          height: 49px;
+          border: 1px solid #333;
+          border-radius: 5px;
+          padding: 0px 10px;
+          &:focus {
+            outline: 1px solid orangered;
+            border: none;
+          }
+        }
+      }
+      .subscribe {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+          font-size: 12px;
+          margin: 0px;
+        }
+        input {
+          height: unset;
+          visibility: hidden;
+        }
+        .toggle {
+          cursor: pointer;
+          position: relative;
+          border-radius: 20px;
+          display: grid;
+          align-items: center;
+          width: 25px;
+          height: 12px;
+          &::before {
+            position: absolute;
+            align-self: center;
+            content: "";
+            height: 8px;
+            width: 8px;
+            bottom: 2px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50px;
+          }
+        }
+        .deactive {
+          background-color: rgb(187, 187, 187);
+          &::before {
+            left: 4px;
+          }
+        }
+        .active {
+          background-color: rgb(14, 93, 167);
+          &::before {
+            left: auto;
+            right: 4px;
+          }
+        }
+      }
+      button {
+        cursor: pointer;
+        height: 50px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        background: orangered;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+      }
+    }
+    .terms {
+      font-size: 11px;
+      font-style: italic;
+      line-height: 17px;
+      color: #333;
+      .link {
+        color: rgb(14, 93, 167);
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .rightside {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 270px;
+      }
+    }
+  }
+}
+
+.css-1s2u09g-control {
+  border-color: orangered !important;
+  outline: none !important;
+}
+.css-1pahdxg-control {
+  border-color: orangered !important;
+  outline: none !important;
+  box-shadow: 0 0 0 1px orangered !important;
+  &:hover {
+    border-color: orangered !important;
+    outline: none !important;
+  }
+}
