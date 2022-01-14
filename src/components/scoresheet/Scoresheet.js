@@ -2,6 +2,7 @@ import React from "react";
 import "./Scoresheet.scss";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { CSVLink } from "react-csv";
 import { scoresActions } from "../../store/scores";
 
 import retry from "../../images/sysIcon/Dark_Retry.png";
@@ -42,6 +43,14 @@ const Scoresheet = () => {
   const resetHandler = () => {
     dispatch(scoresActions.resetGame());
   };
+
+  /// csv file generator
+  const csvData = [["Rank", "Player", "Country", "Score"]];
+  for (let i = 0; i < highscores.length; i++) {
+    const element = highscores[i];
+    csvData.push([i + 1, element.player, element.country, element.score]);
+  }
+
   return (
     <div className="scoresheet_container">
       <div className="scoresheet_overlay"></div>
@@ -62,7 +71,11 @@ const Scoresheet = () => {
               <Slice
                 id={currentPlayer[0]?.id}
                 rank="="
-                player={window.screen.width > 450 ? currentPlayer[0]?.player?.slice(0, 24) : currentPlayer[0]?.player?.slice(0, 18)}
+                player={
+                  window.screen.width > 450
+                    ? currentPlayer[0]?.player?.slice(0, 24)
+                    : currentPlayer[0]?.player?.slice(0, 18)
+                }
                 country={currentPlayer[0]?.country?.slice(0, 15)}
                 score={currentPlayer[0]?.score}
               />
@@ -81,7 +94,11 @@ const Scoresheet = () => {
                     key={id}
                     id={id}
                     rank={index + 1}
-                    player={window.screen.width > 450 ? player.slice(0, 24) : player.slice(0, 12)+'...'}
+                    player={
+                      window.screen.width > 450
+                        ? player.slice(0, 24)
+                        : player.slice(0, 12) + "..."
+                    }
                     country={country.slice(0, 15)}
                     score={score}
                   />
@@ -89,6 +106,9 @@ const Scoresheet = () => {
               })}
           </div>
         </div>
+        <CSVLink download="Yoda Scoreboard" className="download" data={csvData}>
+          Download Scoreboard
+        </CSVLink>
       </div>
       <div className="footer-area">
         <div className="footer__retry-area">
