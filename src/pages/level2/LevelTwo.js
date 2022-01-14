@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { Helmet } from "react-helmet";
 import { useDrop } from "react-dnd";
+import { useSelector } from "react-redux";
 import "./LevelTwo.scss";
 import "./LevelTwoLandscape.scss";
 
@@ -81,10 +82,9 @@ const tiles = [
 ];
 
 const LevelTwo = () => {
-  const [landscape, setLandscape] = useState(false);
+  const landscape = useSelector((state) => state.footerBtn.landscape);
   const [tileList, setTilesList] = useState(tiles);
 
-  // const [onBridge, setOnBridge] = useState([]);
   const [counter, setCounter] = useState(0);
   const [cash, setCash] = useState(25000);
   const [percentage, setPercentage] = useState(0);
@@ -126,7 +126,6 @@ const LevelTwo = () => {
   };
 
   const resetGame = () => {
-
     setCash(25000);
 
     setCounter(0);
@@ -134,14 +133,6 @@ const LevelTwo = () => {
     setPercentage(0);
 
     setTilesList(tiles);
-  };
-
-  const landscapeHandler = () => {
-    if (!landscape) {
-      setLandscape(true);
-    } else {
-      setLandscape(false);
-    }
   };
 
   let tmp;
@@ -171,7 +162,7 @@ const LevelTwo = () => {
                   ? guage100
                   : percentage >= 25
                   ? guage75
-                  :  guage50
+                  : guage50
               }
               level="Level 2"
               backimg={background}
@@ -197,10 +188,10 @@ const LevelTwo = () => {
                   <img
                     src={
                       percentage >= 49
-                  ? guage100
-                  : percentage >= 25
-                  ? guage75
-                  :  guage50
+                        ? guage100
+                        : percentage >= 25
+                        ? guage75
+                        : guage50
                     }
                     alt="guage"
                   />
@@ -231,7 +222,7 @@ const LevelTwo = () => {
               />
             );
           })}
-          <Footer reset={resetGame} flip={landscapeHandler} />
+          <Footer reset={resetGame} />
         </div>
       </div>
     </>

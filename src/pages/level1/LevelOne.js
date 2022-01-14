@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useDrop } from "react-dnd";
+import { useSelector } from "react-redux";
 import "./LevelOne.scss";
 import "./LevelOneLandscape.scss";
 
@@ -84,7 +85,7 @@ const fruits = [
 ];
 
 const LevelOne = () => {
-  const [landscape, setLandscape] = useState(false);
+  const landscape = useSelector((state) => state.footerBtn.landscape);
   const [fruitList, setFruitsList] = useState(fruits);
 
   const [counter, setCounter] = useState(0);
@@ -110,10 +111,6 @@ const LevelOne = () => {
       return;
     }
 
-    // setInBasket((inBasket) => {
-    //   return [...inBasket, { ...draggedFruit }];
-    // });
-
     setFruitsList((fruitList) => {
       return fruitList.filter((fruit) => id !== fruit.id);
     });
@@ -132,8 +129,6 @@ const LevelOne = () => {
   };
 
   const resetGame = () => {
-    // setInBasket([]);
-
     setCash(25);
 
     setCounter(0);
@@ -141,14 +136,6 @@ const LevelOne = () => {
     setCalories(0);
 
     setFruitsList(fruits);
-  };
-
-  const landscapeHandler = () => {
-    if (!landscape) {
-      setLandscape(true);
-    } else {
-      setLandscape(false);
-    }
   };
 
   let tmp;
@@ -187,7 +174,7 @@ const LevelOne = () => {
               level="Level 1"
               backimg={background}
               retryclicked={resetGame}
-              path= "/level2"
+              path="/level2"
             />,
             document.getElementById("overlay")
           )}
@@ -217,18 +204,6 @@ const LevelOne = () => {
             >
               {counter}
             </p>
-            {/* {inBasket?.map(({ fruit, image, id, left, top }) => {
-              return (
-                <BasketFruit
-                  id={id}
-                  key={id}
-                  alt={fruit}
-                  image={image}
-                  left={left}
-                  top={top}
-                />
-              );
-            })} */}
           </div>
           {fruitList?.map(({ fruit, image, cal, price, id }, index) => {
             return (
@@ -244,7 +219,7 @@ const LevelOne = () => {
               />
             );
           })}
-          <Footer reset={resetGame} flip={landscapeHandler} />
+          <Footer reset={resetGame} />
         </div>
       </div>
     </>

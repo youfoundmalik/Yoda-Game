@@ -1,11 +1,19 @@
 import React from "react";
 import "./Footer.scss";
+import { useDispatch } from "react-redux";
+import { footerBtnActions } from "../../store/FooterButtons";
 
 import retry from "../../images/sysIcon/Dark_Retry.png";
 import sound from "../../images/sysIcon/Dark_SoundOff.png";
 import fullscreen from "../../images/sysIcon/Dark_Fullscreen.png";
 
-const Footer = ({ reset,flip }) => {
+const Footer = ({ reset }) => {
+  
+  const dispatch = useDispatch()
+
+  const flip = () => {
+    dispatch(footerBtnActions.flip())
+  }
   return (
     <div className="footer-area">
       <div className="footer__retry-area">

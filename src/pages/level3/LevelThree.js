@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { Helmet } from "react-helmet";
 import { useDrop } from "react-dnd";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import InputDetails from "../../components/details/InputDetails";
 import { scoresActions } from "../../store/scores";
@@ -136,7 +136,8 @@ const road3 = [
 
 const LevelThree = () => {
   const dispatch = useDispatch();
-  const [landscape, setLandscape] = useState(false);
+  const landscape = useSelector((state) => state.footerBtn.landscape);
+
   const [gameOver, setGameOver] = useState(false);
 
   const [bridgeOne, setBridgeOne] = useState(bridge1);
@@ -381,14 +382,6 @@ const LevelThree = () => {
     setInRoad3([]);
   };
 
-  const landscapeHandler = () => {
-    if (!landscape) {
-      setLandscape(true);
-    } else {
-      setLandscape(false);
-    }
-  };
-
   return (
     <>
       <Helmet>
@@ -575,7 +568,7 @@ const LevelThree = () => {
               })}
             </div>
           </div>
-          <Footer reset={resetGame} flip={landscapeHandler} />
+          <Footer reset={resetGame} />
         </div>
       </div>
     </>
