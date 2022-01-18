@@ -1,9 +1,12 @@
 // mobile screens potrait mode*************/
+#overlay{
+  // height: 150vh;
+}
 .landscape-deactive {
   display: grid;
   align-items: flex-start;
   justify-content: flex-end;
-  height: 100vh;
+  min-height: 100vh;
   .level-three__container {
     display: grid;
     position: relative;
@@ -519,8 +522,7 @@
       }
     }
   }
-}
-@media (min-height: 600px) and (min-width: 500px) {
+
   .landscape-active {
     .level-three__container {
       height: 50vw;
@@ -905,8 +907,7 @@
       }
     }
   }
-}
-@media (min-width: 48em) {
+
   .landscape-active {
     .level-three__container {
       .header-area {
@@ -1081,7 +1082,6 @@
     }
   }
 }
-
 // desktop screen****************/
 @media (min-width: 65em) {
   .landscape-deactive {
@@ -1487,8 +1487,7 @@
       }
     }
   }
-}
-@media (max-height: 600px) {
+
   .landscape-active {
     // justify-content: flex-start;
     .level-three__container {

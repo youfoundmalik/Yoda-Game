@@ -518,8 +518,8 @@ const LevelThree = () => {
   return (
     <>
       <Helmet>
-        <title>Yoda Game - Level Two</title>
-        <meta name="description" content="The Yoda Game Level 2" />
+        <title>Yoda Game - Level Three</title>
+        <meta name="description" content="The Yoda Game Level 3" />
       </Helmet>
       <div className={!landscape ? "landscape-deactive" : "landscape-active"}>
         {gameOver &&
