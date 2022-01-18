@@ -1,6 +1,7 @@
 .scoresheet_container {
+  padding: 20px 0;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,10 +14,6 @@
     background: rgba(255, 255, 255, 0.5);
   }
   .scoresheet_content {
-    p {
-      margin: 0px;
-      text-transform: capitalize;
-    }
     position: relative;
     z-index: 2;
     min-height: 100vh;
@@ -25,6 +22,10 @@
     gap: 30px;
     align-items: center;
     justify-content: center;
+    p {
+      margin: 0px;
+      text-transform: capitalize;
+    }
     .scoresheet_table {
       width: 93vw;
       justify-self: center;
@@ -121,8 +122,6 @@
   .footer-area {
     position: absolute;
     bottom: 0;
-    padding-bottom: 10px;
-    // width: 100%;
     z-index: 3;
     a {
       text-decoration: none;
@@ -141,7 +140,7 @@
 
 @media (min-width: 48em){
   .scoresheet_container {
-    
+    padding: unset;
     .scoresheet_content {
       .scoresheet_table {
         width: 700px;

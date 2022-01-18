@@ -1,4 +1,5 @@
 .details_container {
+  margin: 20px 0;
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr;
@@ -144,6 +145,7 @@
 
 @media (min-width: 48em) {
   .details_container {
+    margin: unset;
     grid-template-columns: 3fr 2fr;
     width: 650px;
 

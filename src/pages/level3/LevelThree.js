@@ -55,6 +55,7 @@ import money from "../../images/Yoda_Budget.png";
 
 const bridge1 = [
   {
+    parent: 10,
     id: 1,
     tile: "yellow_tile",
     image: `${bridge1Y}`,
@@ -62,6 +63,7 @@ const bridge1 = [
     price: 23000,
   },
   {
+    parent: 10,
     id: 2,
     tile: "green_tile",
     image: `${bridge1G}`,
@@ -71,6 +73,7 @@ const bridge1 = [
 ];
 const bridge2 = [
   {
+    parent: 20,
     id: 1,
     tile: "yellow_tile",
     image: `${bridge2Y}`,
@@ -78,6 +81,7 @@ const bridge2 = [
     price: 27000,
   },
   {
+    parent: 20,
     id: 2,
     tile: "green_tile",
     image: `${bridge2G}`,
@@ -87,6 +91,7 @@ const bridge2 = [
 ];
 const road1 = [
   {
+    parent: 30,
     id: 1,
     tile: "yellow_tile",
     image: `${Road1Y}`,
@@ -94,6 +99,7 @@ const road1 = [
     price: 13000,
   },
   {
+    parent: 30,
     id: 2,
     tile: "green_tile",
     image: `${Road1G}`,
@@ -103,6 +109,7 @@ const road1 = [
 ];
 const road2 = [
   {
+    parent: 40,
     id: 1,
     tile: "yellow_tile",
     image: `${Road1Y}`,
@@ -110,6 +117,7 @@ const road2 = [
     price: 17000,
   },
   {
+    parent: 40,
     id: 2,
     tile: "green_tile",
     image: `${Road2G}`,
@@ -119,6 +127,7 @@ const road2 = [
 ];
 const road3 = [
   {
+    parent: 50,
     id: 1,
     tile: "yellow_tile",
     image: `${Road2Y}`,
@@ -126,6 +135,90 @@ const road3 = [
     price: 5000,
   },
   {
+    parent: 50,
+    id: 2,
+    tile: "green_tile",
+    image: `${Road1G}`,
+    percent: "14",
+    price: 41000,
+  },
+];
+
+const allTiles = [
+  {
+    parent: 10,
+    id: 1,
+    tile: "yellow_tile",
+    image: `${bridge1Y}`,
+    percent: "14",
+    price: 23000,
+  },
+  {
+    parent: 10,
+    id: 2,
+    tile: "green_tile",
+    image: `${bridge1G}`,
+    percent: "32",
+    price: 50000,
+  },
+  {
+    parent: 20,
+    id: 1,
+    tile: "yellow_tile",
+    image: `${bridge2Y}`,
+    percent: "19",
+    price: 27000,
+  },
+  {
+    parent: 20,
+    id: 2,
+    tile: "green_tile",
+    image: `${bridge2G}`,
+    percent: "22",
+    price: 55000,
+  },
+  {
+    parent: 30,
+    id: 1,
+    tile: "yellow_tile",
+    image: `${Road1Y}`,
+    percent: "9",
+    price: 13000,
+  },
+  {
+    parent: 30,
+    id: 2,
+    tile: "green_tile",
+    image: `${Road1G}`,
+    percent: "15",
+    price: 45000,
+  },
+  {
+    parent: 40,
+    id: 1,
+    tile: "yellow_tile",
+    image: `${Road1Y}`,
+    percent: "12",
+    price: 17000,
+  },
+  {
+    parent: 40,
+    id: 2,
+    tile: "green_tile",
+    image: `${Road2G}`,
+    percent: "17",
+    price: 39000,
+  },
+  {
+    parent: 50,
+    id: 1,
+    tile: "yellow_tile",
+    image: `${Road2Y}`,
+    percent: "11",
+    price: 5000,
+  },
+  {
+    parent: 50,
     id: 2,
     tile: "green_tile",
     image: `${Road1G}`,
@@ -139,6 +232,7 @@ const LevelThree = () => {
   const landscape = useSelector((state) => state.footerBtn.landscape);
 
   const [gameOver, setGameOver] = useState(false);
+  const [availableTiles, setAvailableTiles] = useState(allTiles);
 
   const [bridgeOne, setBridgeOne] = useState(bridge1);
   const [inBridge1, setInBridge1] = useState([]);
@@ -227,8 +321,13 @@ const LevelThree = () => {
       setInBridge1((inBridge) => {
         return [...inBridge, { ...draggedTile }];
       });
+
       setBridgeOne((bridge1) => {
         return bridge1.filter((tile) => id !== tile.id);
+      });
+
+      setAvailableTiles((prev) => {
+        return prev.filter((tiles) => draggedTile.parent !== tiles.parent);
       });
 
       setCash((prev) => {
@@ -253,8 +352,13 @@ const LevelThree = () => {
       setInBridge2((inBridge) => {
         return [...inBridge, { ...draggedTile }];
       });
+
       setBridgeTwo((bridge2) => {
         return bridge2.filter((tile) => id !== tile.id);
+      });
+
+      setAvailableTiles((prev) => {
+        return prev.filter((tiles) => draggedTile.parent !== tiles.parent);
       });
 
       setCash((prev) => {
@@ -279,8 +383,13 @@ const LevelThree = () => {
       setInRoad1((inRoad) => {
         return [...inRoad, { ...draggedTile }];
       });
+
       setRoadOne((road1) => {
         return road1.filter((tile) => id !== tile.id);
+      });
+
+      setAvailableTiles((prev) => {
+        return prev.filter((tiles) => draggedTile.parent !== tiles.parent);
       });
 
       setCash((prev) => {
@@ -305,8 +414,13 @@ const LevelThree = () => {
       setInRoad2((inRoad) => {
         return [...inRoad, { ...draggedTile }];
       });
+
       setRoadTwo((road2) => {
         return road2.filter((tile) => id !== tile.id);
+      });
+
+      setAvailableTiles((prev) => {
+        return prev.filter((tiles) => draggedTile.parent !== tiles.parent);
       });
 
       setCash((prev) => {
@@ -331,8 +445,13 @@ const LevelThree = () => {
       setInRoad3((inRoad) => {
         return [...inRoad, { ...draggedTile }];
       });
+
       setRoadThree((road3) => {
         return road3.filter((tile) => id !== tile.id);
+      });
+
+      setAvailableTiles((prev) => {
+        return prev.filter((tiles) => draggedTile.parent !== tiles.parent);
       });
 
       setCash((prev) => {
@@ -357,8 +476,22 @@ const LevelThree = () => {
       roadThree.length < 2
     ) {
       setGameOver(true);
+    } else {
+      let tmp;
+      for (let i = availableTiles.length - 1; i >= 0; i--) {
+        tmp = availableTiles[i].price;
+        for (let j = 0; j < availableTiles.length; j++) {
+          const selected = availableTiles[j].price;
+          if (tmp > selected) {
+            tmp = selected;
+          }
+        }
+      }
+      if (cash < tmp) {
+        setGameOver(true);
+      }
     }
-  }, [bridgeOne, bridgeTwo, roadOne, roadTwo, roadThree]);
+  }, [bridgeOne, bridgeTwo, roadOne, roadTwo, roadThree, availableTiles, cash]);
 
   const resetGame = () => {
     dispatch(scoresActions.resetGame());
