@@ -13,7 +13,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<p>loading</p>}>
-        {/* <ScrollRestoration /> */}
+        <ScrollRestoration />
         <Switch>
           <Route path="/level1" exact>
             <LevelOne />
