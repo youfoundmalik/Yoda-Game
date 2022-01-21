@@ -1,17 +1,19 @@
 import React, { Suspense } from "react";
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
+import ScrollRestoration from "react-scroll-restoration";
 
-const Scoresheet = React.lazy(()=> import( "./components/scoresheet/Scoresheet"))
-const LevelOne = React.lazy(()=> import( "./pages/level1/LevelOne"))
-const LevelTwo = React.lazy(()=> import( "./pages/level2/LevelTwo"))
-const LevelThree = React.lazy(()=> import( "./pages/level3/LevelThree"))
-
-
+const Scoresheet = React.lazy(() =>
+  import("./components/scoresheet/Scoresheet")
+);
+const LevelOne = React.lazy(() => import("./pages/level1/LevelOne"));
+const LevelTwo = React.lazy(() => import("./pages/level2/LevelTwo"));
+const LevelThree = React.lazy(() => import("./pages/level3/LevelThree"));
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<p>loading</p>}>
+        {/* <ScrollRestoration /> */}
         <Switch>
           <Route path="/level1" exact>
             <LevelOne />
