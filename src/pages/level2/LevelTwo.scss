@@ -1,0 +1,387 @@
+.landscape-deactive {
+  display: grid;
+  align-items: flex-start;
+  .level-two__container {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e3e8fe;
+    background-image: url("../../images/Lvl2/Yoda_Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .header-area {
+      padding-top: 15px;
+      display: grid;
+      grid-template-columns: 60% 40%;
+      .header__dynamic-area {
+        display: grid;
+        justify-content: flex-start;
+        grid-template-columns: 1fr 4fr;
+        align-items: flex-start;
+        gap: 5%;
+        .dynamic-area__money {
+          margin-top: 10%;
+          gap: 10px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          .money__image {
+            margin-top: -5px;
+            width: 40px;
+            padding-top: 10px;
+          }
+          .money__amount {
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+          }
+        }
+        .dynamic-area__bar {
+          display: flex;
+          justify-content: flex-start;
+          .bar__guage {
+            width: 50px;
+          }
+        }
+      }
+    }
+
+    .level-two__map {
+      position: absolute;
+      width: 35%;
+      top: 10%;
+      left: 30%;
+      display: grid;
+      justify-content: center;
+
+      .map__counter {
+        z-index: 3;
+        font-size: 70px;
+        top: 190px;
+        position: relative;
+        color: aliceblue;
+      }
+
+      .map {
+        z-index: 2;
+        position: absolute;
+        opacity: 1;
+      }
+    }
+
+    .Pavement {
+      left: 82%;
+      top: 5%;
+    }
+    .Pavement2 {
+      left: 80%;
+      top: 21%;
+    }
+    .Bridge {
+      left: 75%;
+      top: 37%;
+    }
+    .Bridge2 {
+      left: 70%;
+      top: 53%;
+    }
+    .Equipment {
+      left: 63%;
+      top: 69%;
+    }
+    .Fleet {
+      left: 55%;
+      top: 85%;
+    }
+  }
+}
+@media screen and (max-height: 600px){
+  .landscape-deactive {
+    .level-two__container {
+      height: 100vh;
+
+      .header-area {
+        .header__dynamic-area {
+          gap: 5%;
+          .dynamic-area__money {
+            .money__amount {
+              font-size: 28px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 40px;
+            }
+          }
+        }
+      }
+  
+      .level-two__map {
+        width: 400px;
+        top: 10%;
+        left: 25%;
+  
+        .map__counter {
+          font-size: 70px;
+          top: 190px;
+        }
+      }
+      .level-two__tile_img{
+        width: 70px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .landscape-deactive {
+    .level-two__container {
+      height: 50vh;
+      width: 100%;
+      background-image: url("../../images/Lvl2/Yoda_Background.png");
+      background-size: cover;
+
+      .header-area {
+        padding-top: 15px;
+        .header__dynamic-area {
+          gap: 10%;
+          .dynamic-area__money {
+            .money__image {
+            }
+            .money__amount {
+              font-size: 28px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 40px;
+            }
+          }
+        }
+      }
+  
+      .level-two__map {
+        width: 45%;
+        top: 10%;
+        left: 25%;
+  
+        .map__counter {
+          font-size: 70px;
+          top: 190px;
+        }
+      }
+
+      .Pavement {
+        left: 80%;
+        top: 18vh;
+      }
+      .Pavement2 {
+        left: 75%;
+        top: 27vh;
+      }
+      .Bridge {
+        left: 68%;
+        top: 36vh;
+      }
+      .Bridge2 {
+        left: 47%;
+        top: 40vh;
+      }
+      .Equipment {
+        left: 27%;
+        top: 40vh;
+      }
+      .Fleet {
+        left: 10%;
+        top: 35vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landscape-deactive {
+    .level-two__container {
+      height: 300px;
+      width: 100%;
+
+      .header-area {
+        padding-top: 10px;
+        grid-template-columns: 50% 50%;
+        .header__dynamic-area {
+          justify-content: flex-end;
+          gap: 7%;
+          .dynamic-area__money {
+            margin-top: 10%;
+            gap: 10px;
+            .money__image {
+              width: 30px;
+            }
+            .money__amount {
+              font-size: 20px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 30px;
+            }
+          }
+        }
+      }
+  
+      .level-two__map {
+        position: absolute;
+        width: 180px;
+        top: 15%;
+        left: 26%;
+        display: grid;
+        justify-content: center;
+  
+        .map__counter {
+          font-size: 30px;
+          top: 90px;
+        }
+      }
+
+      .Pavement {
+        left: 73%;
+        top: 120px;
+      }
+      .Pavement2 {
+        left: 70%;
+        top: 180px;
+      }
+      .Bridge {
+        left: 60%;
+        top: 230px;
+      }
+      .Bridge2 {
+        left: 33%;
+        top: 240px;
+      }
+      .Equipment {
+        left: 10%;
+        top: 222px;
+      }
+      .Fleet {
+        left: 2%;
+        top: 170px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 500px) {
+  .landscape-deactive {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+
+    .level-two__container {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden !important;
+      background-color: #e3e8fe;
+      background-image: url("../../images/Lvl2/Yoda_Background.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: grid;
+      grid-template-rows: 1fr 2fr 1fr;
+      position: relative;
+
+      
+
+      .header-area {
+        padding-top: 15px;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        .header__dynamic-area {
+          display: grid;
+          justify-content: flex-start;
+          grid-template-columns: 1fr 4fr;
+          align-items: flex-start;
+          gap: 5%;
+          .dynamic-area__money {
+            margin-top: 10%;
+            gap: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .money__image {
+              margin-top: -5px;
+              width: 30px;
+              padding-top: 10px;
+            }
+            .money__amount {
+              font-size: 20px;
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+            }
+          }
+          .dynamic-area__bar {
+            display: flex;
+            justify-content: flex-start;
+            .bar__guage {
+              width: 30px;
+            }
+          }
+        }
+      }
+  
+      .level-two__map {
+        position: absolute;
+        width: 35%;
+        top: 10%;
+        left: 30%;
+        display: grid;
+        justify-content: center;
+  
+        .map__counter {
+          z-index: 3;
+          font-size: 70px;
+          top: 190px;
+          position: relative;
+          color: aliceblue;
+        }
+  
+        .map {
+          z-index: 2;
+          position: absolute;
+          opacity: 1;
+        }
+      }
+  
+      .Pavement {
+        left: 82%;
+        top: 5%;
+      }
+      .Pavement2 {
+        left: 80%;
+        top: 21%;
+      }
+      .Bridge {
+        left: 75%;
+        top: 37%;
+      }
+      .Bridge2 {
+        left: 70%;
+        top: 53%;
+      }
+      .Equipment {
+        left: 63%;
+        top: 69%;
+      }
+      .Fleet {
+        left: 55%;
+        top: 85%;
+      }
+    }
+  }
+}

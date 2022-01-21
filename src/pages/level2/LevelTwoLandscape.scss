@@ -1,0 +1,194 @@
+.landscape-active {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+
+  .level-two__container {
+    transform: rotate(-90deg);
+    width: 100vh;
+    height: 100vw;
+    overflow: hidden !important;
+    background-color: #e3e8fe;
+    background-image: url("../../images/Lvl2/Yoda_Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    position: relative;
+
+    .header-area {
+      padding-top: 15px;
+      display: grid;
+      grid-template-columns: 55% 45%;
+      .header__dynamic-area {
+        display: grid;
+        justify-content: flex-start;
+        grid-template-columns: 1fr 4fr;
+        align-items: flex-start;
+        gap: 5%;
+        .dynamic-area__money {
+          margin-top: 10%;
+          gap: 10px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          .money__image {
+            margin-top: -5px;
+            width: 30px;
+            padding-top: 10px;
+          }
+          .money__amount {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+          }
+        }
+        .dynamic-area__bar {
+          display: flex;
+          justify-content: flex-start;
+          .bar__guage {
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    .level-two__map {
+      position: absolute;
+      width: 50%;
+      top: 40%;
+      left: 10%;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+
+      .map__counter {
+        z-index: 3;
+        font-size: 70px;
+        top: auto;
+        position: relative;
+        color: aliceblue;
+      }
+
+      .map {
+        z-index: 2;
+        position: absolute;
+        opacity: 1;
+      }
+    }
+
+    .Pavement {
+      left: 82%;
+      top: 5%;
+    }
+    .Pavement2 {
+      left: 80%;
+      top: 21%;
+    }
+    .Bridge {
+      left: 75%;
+      top: 37%;
+    }
+    .Bridge2 {
+      left: 70%;
+      top: 53%;
+    }
+    .Equipment {
+      left: 63%;
+      top: 69%;
+    }
+    .Fleet {
+      left: 55%;
+      top: 85%;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) and (max-height: 500px) {
+  .landscape-active {
+    .level-two__container {
+      height: 300px;
+
+      .header-area {
+        padding-top: 10px;
+        grid-template-columns: 50% 50%;
+        .header__dynamic-area {
+          justify-content: flex-end;
+          gap: 7%;
+          .dynamic-area__money {
+            margin-top: 10%;
+            gap: 10px;
+            .money__image {
+              width: 30px;
+            }
+            .money__amount {
+              font-size: 20px;
+            }
+          }
+          .dynamic-area__bar {
+            .bar__guage {
+              width: 30px;
+            }
+          }
+        }
+      }
+  
+      .level-two__map {
+        position: absolute;
+        width: 35% !important;
+        top: 15%;
+        left: 26%;
+        display: grid;
+        justify-content: center;
+  
+        .map__counter {
+          font-size: 30px;
+          top: 90px;
+        }
+      }
+
+      .Pavement {
+        left: 73%;
+        top: 120px;
+      }
+      .Pavement2 {
+        left: 70%;
+        top: 180px;
+      }
+      .Bridge {
+        left: 60%;
+        top: 230px;
+      }
+      .Bridge2 {
+        left: 33%;
+        top: 240px;
+      }
+      .Equipment {
+        left: 10%;
+        top: 222px;
+      }
+      .Fleet {
+        left: 2%;
+        top: 170px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .landscape-active {
+    .level-two__container {
+  
+      .level-two__map {
+        width: 35% !important;
+  
+        .map__counter {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
